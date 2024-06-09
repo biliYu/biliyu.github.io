@@ -36,10 +36,6 @@ xandr.com, 13799, RESELLER
 xandr.com, 14082, RESELLER
 zmaticoo.com, 5135655, RESELLER
 //unity
-lijit.com, 489963, RESELLER, fafdf38b16bf6b2b
-playdigo.com, 1965, RESELLER, 92011346d63d3c30
-playwire.com, 1025119, RESELLER
-rubiconproject.com, 25872, RESELLER, 0bfd66d529a55807
 152media.info, 152M324, RESELLER
 adcolony.com, 0a0f72cd66122f31, RESELLER, 1ad675c9de6b5176
 adcolony.com, 801e49d1be83b5f9, RESELLER, 1ad675c9de6b5176
@@ -97,6 +93,7 @@ inmobi.com, 9e311c7a68e94888aac7fbb4272381e2, RESELLER
 kidoz.net, 14260, RESELLER, a109366414b7335e
 lemmatechnologies.com, 362, RESELLER, 7829010c5bebd1fb
 liftoff.io, 7f6945815e6, RESELLER
+lijit.com, 489963, RESELLER, fafdf38b16bf6b2b
 lijit.com, 503707, RESELLER, fafdf38b16bf6b2b
 loopme.com, 11414, RESELLER, 6c8d5f95897a5a3b
 loopme.com, 11635, RESELLER, 6c8d5f95897a5a3b
@@ -113,8 +110,10 @@ openx.com, 540866936, RESELLER, 6a698e2ec38604c6
 openx.com, 540871654, RESELLER, 6a698e2ec38604c6
 openx.com, 541031350, RESELLER, 6a698e2ec38604c6
 opera.com, pub6794361378752, RESELLER, 55a0c5fd61378de3
+playdigo.com, 1965, RESELLER, 92011346d63d3c30
 playwire.com, 1018531, RESELLER
 playwire.com, 1025000, RESELLER
+playwire.com, 1025119, RESELLER
 pokkt.com, 6246, RESELLER, c45702d9311e25fd
 pokkt.com, 7606, RESELLER, c45702d9311e25fd
 pubmatic.com, 156494, RESELLER, 5d62403b186f2ace
@@ -174,8 +173,9 @@ rubiconproject.com, 24362, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 24400, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 24526, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 24600, RESELLER, 0bfd66d529a55807
+rubiconproject.com, 25872, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 26184, RESELLER, 0bfd66d529a55807
-rubiconproject.com, 26292, RESELLER, 0bfd66d529a55807
+rubiconproject.com, 26292, RESELLER, 0bfd66d529a5580
 rubiconproject.com, 26386, RESELLER, 0bfd66d529a55807
 sharethrough.com, bXzzb1bR, RESELLER, d53b998a7bd4ecd2
 sharethrough.com, iBAzay96, RESELLER, d53b998a7bd4ecd2
