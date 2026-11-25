@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs><rect id="tooth" x="26" y="3" width="12" height="17" rx="4"/></defs>
+  <g fill="#74431e">
+    <circle cx="32" cy="32" r="22"/>
+    <use href="#tooth"/><use href="#tooth" transform="rotate(45 32 32)"/>
+    <use href="#tooth" transform="rotate(90 32 32)"/><use href="#tooth" transform="rotate(135 32 32)"/>
+    <use href="#tooth" transform="rotate(180 32 32)"/><use href="#tooth" transform="rotate(225 32 32)"/>
+    <use href="#tooth" transform="rotate(270 32 32)"/><use href="#tooth" transform="rotate(315 32 32)"/>
+  </g>
+  <circle cx="32" cy="32" r="12" fill="#ffebc9"/>
+</svg>

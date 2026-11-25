@@ -1,0 +1,51 @@
+{
+  "id": "study_ortho_45_30_v1",
+  "projection": "orthographic_dimetric",
+  "azimuthDegrees": 45,
+  "elevationDegrees": 30,
+  "worldAxes": "Z up, X and Y form ground plane",
+  "imageAxes": "X right, Y down",
+  "sceneCanvas": [
+    1111,
+    1415
+  ],
+  "originPx": [
+    662,
+    984
+  ],
+  "matrix": [
+    [
+      0.8944271909999159,
+      -0.8944271909999159,
+      0
+    ],
+    [
+      0.4472135954999579,
+      0.4472135954999579,
+      -1.0954451150103321
+    ]
+  ],
+  "worldUnitsPerCm": 4.306666666666667,
+  "guideZoom": 3,
+  "guideCanvas": [
+    1024,
+    1024
+  ],
+  "projectedGroundSlopes": [
+    0.5,
+    -0.5
+  ],
+  "lighting": "soft diffuse ambient; no direct sunlight",
+  "export": {
+    "canvas": [
+      1024,
+      1024
+    ],
+    "guideZoom": 3,
+    "sceneCanvas": [
+      1111,
+      1415
+    ],
+    "worldUnitsPerCm": 4.306666666666667
+  }
+}

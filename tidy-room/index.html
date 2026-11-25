@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f4d8b4">
+  <title>Tidy Room</title>
+  <link rel="stylesheet" href="./happy/app.css">
+  <link rel="stylesheet" href="./happy/main-menu.css">
+  <link rel="stylesheet" href="./happy/popup-reference.css">
+  <link rel="stylesheet" href="./happy/victory.css">
+  <script type="module" src="./happy/app.js"></script>
+</head>
+<body>
+<main id="game">
+  <canvas id="board" aria-label="Room. Tap an uncovered item to collect it."></canvas>
+  <canvas id="effects" aria-hidden="true"></canvas>
+  <header class="hud">
+    <button class="hearts" id="hearts" aria-label="Lives"><img data-art="GP_Icon_Heart_S" alt=""><b id="heart-count">5</b><span id="heart-time">Full</span></button>
+    <h1 id="level-title">LEVEL 1</h1>
+    <button class="settings" id="settings" aria-label="Settings"><img src="./happy/ui-assets/outlined-v2/settings.svg" alt=""></button>
+  </header>
+  <section id="orders" aria-label="Collection baskets"></section>
+  <section id="queue-row" aria-label="Waiting slots"><div id="queue"></div><button id="storage" class="storage-model" aria-label="Temporary storage"><img src="./happy/ui-assets/outlined-v2/storage.png" alt=""><b aria-hidden="true">Storage</b><span hidden></span></button></section>
+  <footer id="boosters">
+    <button id="vacuum" aria-label="Vacuum"><img class="booster-icon" data-art="GP_Booster_Vaccum" alt=""><span class="badge" id="vacuum-count"></span></button>
+    <button id="clear" aria-label="Clear waiting slots"><img class="booster-icon" data-art="GP_Booster_Clear" alt=""><span class="badge" id="clear-count"></span></button>
+  </footer>
+  <section id="main-menu" aria-label="Main menu" hidden>
+    <header class="menu-top">
+      <button id="menu-lives" class="menu-resource" aria-label="Lives">
+        <span class="menu-heart"><b id="menu-heart-count">5</b></span>
+        <span id="menu-heart-time">已满</span>
+      </button>
+      <button id="menu-coins" class="menu-resource" aria-label="Coins"><b>600</b></button>
+    </header>
+    <h1 class="menu-logo" aria-label="Tidy Room"><span>TIDY</span><span>ROOM</span></h1>
+    <div class="menu-play-area">
+      <button id="menu-play" class="menu-play-button" type="button"><strong></strong></button>
+    </div>
+    <nav class="menu-navigation" aria-label="Main navigation">
+      <button id="menu-shop"><span></span></button>
+      <button id="menu-home" aria-current="page"><span></span></button>
+      <button id="menu-settings"><span></span></button>
+    </nav>
+  </section>
+  <p id="toast" role="status" hidden></p>
+  <div id="loading"><img id="loading-logo" data-art="Loading_Logo" alt="Happy Tidy Room"><progress aria-label="Loading room"></progress><p id="loading-text">Loading…</p></div>
+  <dialog id="popup" aria-labelledby="popup-title">
+    <p class="revive-balance" hidden></p>
+    <div class="popup-panel">
+      <button id="popup-close" type="button" aria-label="Close"></button>
+      <h2 id="popup-title"></h2><div id="popup-content"></div><div id="popup-actions"></div>
+    </div>
+  </dialog>
+</main>
+</body>
+</html>

@@ -1,0 +1,796 @@
+{
+  "bgPosX": 0,
+  "bg": "study_v5_room",
+  "levelName": "1",
+  "roomName": "我的书房",
+  "order": [
+    {
+      "type": 101,
+      "count": 5,
+      "box": 0,
+      "diff": 0
+    },
+    {
+      "type": 104,
+      "count": 6,
+      "box": 1,
+      "diff": 0
+    },
+    {
+      "type": 100,
+      "count": 5,
+      "box": 2,
+      "diff": 0
+    },
+    {
+      "type": 102,
+      "count": 6,
+      "box": 3,
+      "diff": 0
+    },
+    {
+      "type": 103,
+      "count": 4,
+      "box": 4,
+      "diff": 0
+    }
+  ],
+  "content": [
+    {
+      "id": "study_v5_103-2",
+      "x": 173.58203932499373,
+      "y": -185.1155598492736,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 4,
+      "editorId": "395f065b-bd83-4179-83ae-da0bc89815b3",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "back",
+        "anchorWorld": [
+          315,
+          240,
+          310
+        ],
+        "yaw3D": 0,
+        "imageAnchorPx": [
+          729.0820393249937,
+          892.6155598492736
+        ],
+        "cropOffsetPx": [
+          138,
+          105
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_103-1",
+      "x": 173.58203932499373,
+      "y": -185.1155598492736,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 4,
+      "editorId": "c370215e-fb71-4174-8111-71ce37fd8dd0",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "back",
+        "anchorWorld": [
+          315,
+          240,
+          310
+        ],
+        "yaw3D": 0,
+        "imageAnchorPx": [
+          729.0820393249937,
+          892.6155598492736
+        ],
+        "cropOffsetPx": [
+          96,
+          89
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_103-3",
+      "x": 105.46208240960175,
+      "y": -372.1112286866867,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 4,
+      "editorId": "4d8b41ea-2dea-4824-a051-9a5f86382435",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "seat",
+        "anchorWorld": [
+          315.7477628140231,
+          316.9081899576097,
+          171
+        ],
+        "yaw3D": 0,
+        "imageAnchorPx": [
+          660.9620824096017,
+          1079.6112286866867
+        ],
+        "cropOffsetPx": [
+          219,
+          252
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_103-6",
+      "x": -117.82117710606497,
+      "y": -102.51931545571983,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 4,
+      "editorId": "772ab489-b64b-4948-a50e-08430a163ddc",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "desk",
+        "anchorWorld": [
+          75.67692455252192,
+          326.47562495348734,
+          323
+        ],
+        "yaw3D": 0,
+        "imageAnchorPx": [
+          437.67882289393503,
+          810.0193154557198
+        ],
+        "cropOffsetPx": [
+          97,
+          298
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_102-3",
+      "x": 47.78918093519849,
+      "y": -96.37745876098757,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 3,
+      "editorId": "9a256484-2471-45af-9f63-ebfa0ac296e4",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "desk",
+        "anchorWorld": [
+          161.38912460336604,
+          227.02981582515946,
+          323
+        ],
+        "yaw3D": 90,
+        "imageAnchorPx": [
+          603.2891809351985,
+          803.8774587609876
+        ],
+        "cropOffsetPx": [
+          392,
+          419
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_100-5_a",
+      "x": -53.97787351563943,
+      "y": 229.956630801933,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 2,
+      "editorId": "972c34cb-1e29-4766-a050-14b569f9814d",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "shelf",
+        "anchorWorld": [
+          36.03526675553401,
+          215.45498378832548,
+          565
+        ],
+        "yaw3D": 100,
+        "imageAnchorPx": [
+          501.52212648436057,
+          477.543369198067
+        ],
+        "cropOffsetPx": [
+          205,
+          316
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_100-6",
+      "x": 104.03240072854726,
+      "y": -56.619506199193665,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 2,
+      "editorId": "ce54e2bc-e1ff-401d-b1f3-7eefd508c3d6",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "desk",
+        "anchorWorld": [
+          148.37929799902176,
+          151.1381578551204,
+          323
+        ],
+        "yaw3D": 0,
+        "imageAnchorPx": [
+          659.5324007285473,
+          764.1195061991937
+        ],
+        "cropOffsetPx": [
+          301,
+          337
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_100-5_b",
+      "x": -91.98141692672323,
+      "y": 227.59867096777145,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 2,
+      "editorId": "61bfa1c9-166a-44cf-9b15-171dff332240",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "shelf",
+        "anchorWorld": [
+          27.73091183114768,
+          249.63988209046295,
+          573.4131746054736
+        ],
+        "yaw3D": 90,
+        "imageAnchorPx": [
+          463.5185830732768,
+          479.90132903222855
+        ],
+        "cropOffsetPx": [
+          267,
+          306
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_102-1",
+      "x": 20.847769618008897,
+      "y": -37.94538745498062,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 3,
+      "editorId": "322f3db0-9aae-4796-8e7c-3086e967f0af",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "desk",
+        "anchorWorld": [
+          80.9993760714384,
+          176.7614808507408,
+          323
+        ],
+        "yaw3D": 0,
+        "imageAnchorPx": [
+          576.3477696180089,
+          745.4453874549806
+        ],
+        "cropOffsetPx": [
+          88,
+          85
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_102-5",
+      "x": -44.456822364527966,
+      "y": -33.66011111630257,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 3,
+      "editorId": "0ce01cc3-9e88-4a27-b835-eedb47801e33",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "desk",
+        "anchorWorld": [
+          56.848342944132796,
+          225.62320118135534,
+          337
+        ],
+        "yaw3D": 0,
+        "imageAnchorPx": [
+          511.04317763547203,
+          741.1601111163026
+        ],
+        "cropOffsetPx": [
+          360,
+          364
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_102-6",
+      "x": 78.78560507606448,
+      "y": -356.57469987088143,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 3,
+      "editorId": "7de26d54-b763-4b6a-881c-bb0fade933f3",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "seat",
+        "anchorWorld": [
+          306.7349439076954,
+          337.7205794102929,
+          190
+        ],
+        "yaw3D": 0,
+        "imageAnchorPx": [
+          634.2856050760645,
+          1064.0746998708814
+        ],
+        "cropOffsetPx": [
+          317,
+          382
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_100-1",
+      "x": 62.63202354560053,
+      "y": -354.0282014615623,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 2,
+      "editorId": "29e61ebe-0090-46f0-a1b3-81e336b7356a",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "seat",
+        "anchorWorld": [
+          312.0041737377108,
+          361.05006243140946,
+          204
+        ],
+        "yaw3D": 90,
+        "imageAnchorPx": [
+          618.1320235456005,
+          1061.5282014615623
+        ],
+        "cropOffsetPx": [
+          256,
+          287
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_102-4",
+      "x": 15.07355385646008,
+      "y": -3.676379480617584,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 3,
+      "editorId": "831c7320-bfca-4b57-8d58-e9ec5f1f02ea",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "desk",
+        "anchorWorld": [
+          56.60400385494797,
+          158.82187811403733,
+          337
+        ],
+        "yaw3D": 0,
+        "imageAnchorPx": [
+          570.5735538564601,
+          711.1763794806176
+        ],
+        "cropOffsetPx": [
+          417,
+          447
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_104-1",
+      "x": -195.86620829586695,
+      "y": 160.0101227647183,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 1,
+      "editorId": "b6603be4-a904-4955-9b72-0835acd7087d",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "shelf",
+        "anchorWorld": [
+          34.91984968979873,
+          372.97554761400846,
+          565
+        ],
+        "yaw3D": 0,
+        "imageAnchorPx": [
+          359.63379170413305,
+          547.4898772352817
+        ],
+        "cropOffsetPx": [
+          257,
+          238
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_104-2",
+      "x": 190.82235806928088,
+      "y": 4.216419169469873,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 1,
+      "editorId": "c29009b6-d6c3-4c02-8b31-8b6b2670e295",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "desk",
+        "anchorWorld": [
+          128.8797267943509,
+          34.60446446135591,
+          323
+        ],
+        "yaw3D": 90,
+        "imageAnchorPx": [
+          746.3223580692809,
+          703.2835808305301
+        ],
+        "cropOffsetPx": [
+          344,
+          366
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_104-4",
+      "x": 31.5404610768594,
+      "y": -39.75372565419491,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 1,
+      "editorId": "2c8c6ebb-b407-456f-9a80-cd10cd41d52c",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "desk",
+        "anchorWorld": [
+          106.14498408190227,
+          189.95229637899413,
+          337
+        ],
+        "yaw3D": -90,
+        "imageAnchorPx": [
+          587.0404610768594,
+          747.2537256541949
+        ],
+        "cropOffsetPx": [
+          302,
+          253
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_104-3",
+      "x": -81.29399946977185,
+      "y": -89.94915922171049,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 1,
+      "editorId": "f3eb112d-5468-48a3-8e90-1b9924d27c6c",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "desk",
+        "anchorWorld": [
+          94.28982440815922,
+          304.2498986986439,
+          333
+        ],
+        "yaw3D": 90,
+        "imageAnchorPx": [
+          474.20600053022815,
+          797.4491592217105
+        ],
+        "cropOffsetPx": [
+          326,
+          407
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_104-5",
+      "x": -285.85736605603984,
+      "y": 114.06956428191802,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 1,
+      "editorId": "e11d225f-ea78-456d-8a93-790286ff0bf2",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "shelf",
+        "anchorWorld": [
+          35.976369004308026,
+          474.64523999134485,
+          565
+        ],
+        "yaw3D": 0,
+        "imageAnchorPx": [
+          269.64263394396016,
+          593.430435718082
+        ],
+        "cropOffsetPx": [
+          320,
+          421
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_104-6",
+      "x": 229.3942960433884,
+      "y": 55.91705093561313,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 1,
+      "editorId": "102a212a-0123-4c2a-8ef7-18a2b7f0ae5d",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "window",
+        "anchorWorld": [
+          160,
+          22.6,
+          378
+        ],
+        "yaw3D": -2,
+        "imageAnchorPx": [
+          784.8942960433884,
+          651.5829490643869
+        ],
+        "cropOffsetPx": [
+          300,
+          322
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_102-2",
+      "x": 89.17324363855005,
+      "y": 11.463327223731994,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 3,
+      "editorId": "80a456e3-537d-4f16-9b13-9a265c2522f0",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "desk",
+        "anchorWorld": [
+          63.953854846398315,
+          83.3257573732878,
+          323
+        ],
+        "yaw3D": 0,
+        "imageAnchorPx": [
+          644.67324363855,
+          696.036672776268
+        ],
+        "cropOffsetPx": [
+          332,
+          396
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_100-2",
+      "x": -175.57416140924977,
+      "y": -94.94570144116074,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 2,
+      "editorId": "40407d41-d214-4937-81ae-68bf27cdaa85",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "desk",
+        "anchorWorld": [
+          34.92446696522235,
+          350.29296676888754,
+          323
+        ],
+        "yaw3D": 0,
+        "imageAnchorPx": [
+          379.92583859075023,
+          802.4457014411607
+        ],
+        "cropOffsetPx": [
+          346,
+          306
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_101-2",
+      "x": -51.84185256213834,
+      "y": -97.61310301752451,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 0,
+      "editorId": "caf17fe3-af5f-4b1d-ba84-b7570b2243a0",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "desk",
+        "anchorWorld": [
+          119.32262470194289,
+          296.35419770803816,
+          333
+        ],
+        "yaw3D": 90,
+        "imageAnchorPx": [
+          503.65814743786166,
+          805.1131030175245
+        ],
+        "cropOffsetPx": [
+          253,
+          332
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_101-1",
+      "x": -88.96426640866821,
+      "y": -166.40436958633813,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 0,
+      "editorId": "aab83ba1-0f7c-4f7f-8af4-fb605b9a0837",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "desk",
+        "anchorWorld": [
+          187.7289873565168,
+          406.26468078747223,
+          343
+        ],
+        "yaw3D": 0,
+        "imageAnchorPx": [
+          466.5357335913318,
+          873.9043695863381
+        ],
+        "cropOffsetPx": [
+          214,
+          226
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_101-4",
+      "x": -146.8966278865587,
+      "y": -128.54768295760516,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 0,
+      "editorId": "99a2c9e9-0a23-414a-a874-8d4c75e32b38",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "desk",
+        "anchorWorld": [
+          126.49094399903373,
+          409.7969866108158,
+          354
+        ],
+        "yaw3D": 0,
+        "imageAnchorPx": [
+          408.6033721134413,
+          836.0476829576052
+        ],
+        "cropOffsetPx": [
+          261,
+          317
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_101-5",
+      "x": -112.26924401169265,
+      "y": -153.64352860965028,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 0,
+      "editorId": "ce9f5dc1-370b-4913-9b46-71a2775aea07",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "desk",
+        "anchorWorld": [
+          198.40114589906858,
+          442.99259639726034,
+          374
+        ],
+        "yaw3D": 90,
+        "imageAnchorPx": [
+          443.23075598830735,
+          861.1435286096503
+        ],
+        "cropOffsetPx": [
+          60,
+          196
+        ],
+        "pixelsPerUnit": 300
+      }
+    },
+    {
+      "id": "study_v5_101-3",
+      "x": -127.04321876043673,
+      "y": -140.58836372701717,
+      "scaleX": 1,
+      "scaleY": 1,
+      "angle": 0,
+      "box": 0,
+      "editorId": "39ab7433-bdb3-43da-a6ea-57baeec99ae7",
+      "editorPlacement": {
+        "cameraId": "study_ortho_45_30_v1",
+        "support": "desk",
+        "anchorWorld": [
+          197.5915325575849,
+          458.7007889738053,
+          392
+        ],
+        "yaw3D": 0,
+        "imageAnchorPx": [
+          428.45678123956327,
+          848.0883637270172
+        ],
+        "cropOffsetPx": [
+          255,
+          257
+        ],
+        "pixelsPerUnit": 300
+      }
+    }
+  ],
+  "key": "level_1",
+  "cameraId": "study_ortho_45_30_v1"
+}

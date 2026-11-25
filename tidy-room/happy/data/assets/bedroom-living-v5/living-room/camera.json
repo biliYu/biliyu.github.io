@@ -1,0 +1,33 @@
+{
+  "id": "amochi_scene3_ortho45_30_v5",
+  "projection": "orthographic_dimetric",
+  "azimuthDegrees": 45,
+  "elevationDegrees": 30,
+  "k": 2.7,
+  "origin": [
+    700,
+    790
+  ],
+  "canvas": [
+    1462,
+    1560
+  ],
+  "worldUnit": "centimeter",
+  "projectedGroundSlopes": [
+    0.5,
+    -0.5
+  ],
+  "matrix": [
+    [
+      2.7,
+      -2.7,
+      0
+    ],
+    [
+      1.35,
+      1.35,
+      -3.3068111527572905
+    ]
+  ],
+  "lighting": "soft diffuse ambient, no direct sun"
+}

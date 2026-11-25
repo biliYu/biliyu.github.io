@@ -1,0 +1,99 @@
+{
+  "sprites": {
+    "front": "fx-assets/GP_Box_0_Front-native.png",
+    "spark": "fx-assets/Flare02-1426.png",
+    "glow": "fx-assets/Glow2-1007.png"
+  },
+  "rainbow": {
+    "mode": "HSV hue shift",
+    "hueCyclesPerSecond": -0.20000000298023224,
+    "cycleSeconds": 4.999999925494195,
+    "expression": "fract(_Time.y * _HueSpeed)",
+    "shaderSource": "sharedassets1.assets:30",
+    "materialSource": "sharedassets1.assets:8",
+    "storageIdleAnimationSeconds": 3
+  },
+  "boxCompleteBurst": [
+    {
+      "name": "FX_Box_Com/Star",
+      "texture": "fx-assets/Flare02-1426.png",
+      "count": 30,
+      "life": 1000,
+      "size": [
+        10.000000149011612,
+        50
+      ],
+      "speed": [
+        1000,
+        800
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "FX_Box_Com",
+      "texture": "fx-assets/Star01-765.png",
+      "count": 8,
+      "life": 500,
+      "size": [
+        100,
+        200
+      ],
+      "speed": [
+        1500,
+        1000
+      ],
+      "color": [
+        1,
+        0.9302865862846375,
+        0.23137253522872925,
+        1
+      ]
+    },
+    {
+      "name": "FX_Box_Com/Glow",
+      "texture": "fx-assets/Glow2-1007.png",
+      "count": 1,
+      "life": 300.00001192092896,
+      "size": [
+        500,
+        500
+      ],
+      "speed": [
+        0,
+        0
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        0.5098039507865906
+      ],
+      "offsetY": -43.3012701892
+    },
+    {
+      "name": "FX_Box_Com/Dust",
+      "texture": "fx-assets/Smoke-1133.png",
+      "count": 10,
+      "life": 500,
+      "size": [
+        300,
+        200
+      ],
+      "speed": [
+        800,
+        600
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        0.32549020648002625
+      ]
+    }
+  ]
+}

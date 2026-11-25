@@ -1,0 +1,5313 @@
+{
+  "version": 5,
+  "sourceArt": "art-generated/amochi_scenes_4_10_illustrated_v5",
+  "scene": 4,
+  "background": "v5_room4_background",
+  "cameraId": "amochi_scene4_ortho45_30_v5",
+  "sceneCanvas": [
+    1440,
+    1560
+  ],
+  "layout": "New poses on v5 support surfaces",
+  "instances": [
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        9.922235362514849,
+        17.19597703035933,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        798.1787749964666,
+        580.6773185893113
+      ],
+      "cropOffsetPx": [
+        866,
+        861
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-032_9-1",
+      "id": "v5_room4_9-1",
+      "sourceAssetId": "9-1",
+      "sourceTypeId": "9-1",
+      "foregroundClipped": 0.0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        25.091285464907813,
+        10.65886057079328,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        863.2972746823436,
+        593.6252190535516
+      ],
+      "cropOffsetPx": [
+        893,
+        923
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-054_6-3",
+      "id": "v5_room4_6-3",
+      "sourceAssetId": "6-3",
+      "sourceTypeId": "6-3",
+      "foregroundClipped": 0.1431,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        7.150580898986533,
+        37.03210609939883,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        730.3554243987631,
+        606.274030497578
+      ],
+      "cropOffsetPx": [
+        893,
+        923
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-107_6-3",
+      "id": "v5_room4_6-3",
+      "sourceAssetId": "6-3",
+      "sourceTypeId": "6-3",
+      "foregroundClipped": 0.0099,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        25.56167412983406,
+        28.154673496128282,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        812.2210019011173,
+        620.5745214389435
+      ],
+      "cropOffsetPx": [
+        800,
+        854
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-035_9-9",
+      "id": "v5_room4_9-9",
+      "sourceAssetId": "9-9",
+      "sourceTypeId": "9-9",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        20.78973186931117,
+        35.01075212346303,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        777.3369392375444,
+        623.7007259891614
+      ],
+      "cropOffsetPx": [
+        787,
+        796
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-061_3-7",
+      "id": "v5_room4_3-7",
+      "sourceAssetId": "3-7",
+      "sourceTypeId": "3-7",
+      "foregroundClipped": 0.0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        47.50798407581607,
+        13.163479209528374,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        923.0335145988631,
+        631.0071949280167
+      ],
+      "cropOffsetPx": [
+        846,
+        841
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-115_9-4",
+      "id": "v5_room4_9-4",
+      "sourceAssetId": "9-4",
+      "sourceTypeId": "9-4",
+      "foregroundClipped": 0.0164,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        2.7856773233135925,
+        64.1668629506321,
+        0.978494623655914
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        635.8564431180445,
+        636.833591594898
+      ],
+      "cropOffsetPx": [
+        866,
+        880
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-113_7-2",
+      "id": "v5_room4_7-2",
+      "sourceAssetId": "7-2",
+      "sourceTypeId": "7-2",
+      "foregroundClipped": 0.1514,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        5.279278741376274,
+        77.9187906628222,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        602.0814642356622,
+        664.7971041062978
+      ],
+      "cropOffsetPx": [
+        854,
+        851
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-082_11-1",
+      "id": "v5_room4_11-1_yaw90",
+      "sourceAssetId": "11-1_yaw90",
+      "sourceTypeId": "11-1",
+      "foregroundClipped": 0.197,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        70.59332895202556,
+        19.961741812095937,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        971.8947614197889,
+        675.8326061461822
+      ],
+      "cropOffsetPx": [
+        839,
+        807
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-098_49-3",
+      "id": "v5_room4_49-3",
+      "sourceAssetId": "49-3",
+      "sourceTypeId": "49-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        92.62745048786036,
+        10.374834174041922,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1066.7578489414552,
+        694.5034269928534
+      ],
+      "cropOffsetPx": [
+        946,
+        797
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-180_8-8",
+      "id": "v5_room4_8-8",
+      "sourceAssetId": "8-8",
+      "sourceTypeId": "8-8",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        5.509038633646497,
+        103.22784679002355,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        526.8435755308689,
+        703.105328135505
+      ],
+      "cropOffsetPx": [
+        795,
+        838
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-037_9-9",
+      "id": "v5_room4_9-9_yaw90",
+      "sourceAssetId": "9-9_yaw90",
+      "sourceTypeId": "9-9",
+      "foregroundClipped": 0.0518,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        29.868293476793937,
+        82.424877680915,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        662.3302473876367,
+        708.4397567365634
+      ],
+      "cropOffsetPx": [
+        854,
+        858
+      ],
+      "pixelsPerUnit": 144.2307692307692,
+      "editorId": "room4-148_11-3",
+      "id": "v5_room4_11-3_yaw90",
+      "sourceAssetId": "11-3_yaw90",
+      "sourceTypeId": "11-3",
+      "foregroundClipped": 0.1413,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        89.04462301381822,
+        27.97890322735155,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1003.1971593594001,
+        715.5352893617546
+      ],
+      "cropOffsetPx": [
+        893,
+        923
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-123_6-3",
+      "id": "v5_room4_6-3",
+      "sourceAssetId": "6-3",
+      "sourceTypeId": "6-3",
+      "foregroundClipped": 0.0303,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        114.1086218760843,
+        17.143770484389986,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1110.894554175083,
+        736.8785885407115
+      ],
+      "cropOffsetPx": [
+        798,
+        925
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-078_11-7",
+      "id": "v5_room4_11-7",
+      "sourceAssetId": "11-7",
+      "sourceTypeId": "11-7",
+      "foregroundClipped": 0.0386,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        23.044413414187517,
+        119.39885114188982,
+        -0.5071427728138527
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        530.9366868168931,
+        755.5282583643173
+      ],
+      "cropOffsetPx": [
+        668,
+        817
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-034_9-7",
+      "id": "v5_room4_9-7",
+      "sourceAssetId": "9-7",
+      "sourceTypeId": "9-7",
+      "foregroundClipped": 0.0217,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        11.770671272931594,
+        132.36365875688455,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        458.2210375481411,
+        756.2014950447242
+      ],
+      "cropOffsetPx": [
+        843,
+        910
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-114_9-5",
+      "id": "v5_room4_9-5",
+      "sourceAssetId": "9-5",
+      "sourceTypeId": "9-5",
+      "foregroundClipped": 0.017,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        145.58169963513342,
+        21.920526943253314,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1190.9835180756404,
+        791.25333986758
+      ],
+      "cropOffsetPx": [
+        842,
+        812
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-097_49-2",
+      "id": "v5_room4_49-2",
+      "sourceAssetId": "49-2",
+      "sourceTypeId": "49-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        45.434834940303396,
+        143.49732668795582,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        525.8125247570428,
+        823.3982424423889
+      ],
+      "cropOffsetPx": [
+        821,
+        903
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-169_16-8",
+      "id": "v5_room4_16-8",
+      "sourceAssetId": "16-8",
+      "sourceTypeId": "16-8",
+      "foregroundClipped": 0.0679,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        174.18477230952232,
+        20.63584395981725,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1280.6467850491151,
+        832.2309244040093
+      ],
+      "cropOffsetPx": [
+        800,
+        870
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-127_28-4",
+      "id": "v5_room4_28-4",
+      "sourceAssetId": "28-4",
+      "sourceTypeId": "28-4",
+      "foregroundClipped": 0.1111,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        32.98348026399434,
+        164.29971112249805,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        426.0513074244888,
+        835.9247870797386
+      ],
+      "cropOffsetPx": [
+        843,
+        910
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-146_9-5",
+      "id": "v5_room4_9-5",
+      "sourceAssetId": "9-5",
+      "sourceTypeId": "9-5",
+      "foregroundClipped": 0.2193,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        67.42751965190307,
+        140.78200337392323,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        599.9365488339395,
+        852.3142845387395
+      ],
+      "cropOffsetPx": [
+        942,
+        957
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-048_5-4",
+      "id": "v5_room4_5-4",
+      "sourceAssetId": "5-4",
+      "sourceTypeId": "5-4",
+      "foregroundClipped": 0.0094,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        52.61775395611914,
+        165.89829560891252,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        480.1583750416199,
+        867.7740743475474
+      ],
+      "cropOffsetPx": [
+        811,
+        839
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-130_28-6",
+      "id": "v5_room4_28-6",
+      "sourceAssetId": "28-6",
+      "sourceTypeId": "28-6",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        208.19463176115622,
+        18.126556125228888,
+        -0.07565888244028009
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        1390.204226907782,
+        879.7597703143094
+      ],
+      "cropOffsetPx": [
+        839,
+        922
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-017_26-1",
+      "id": "v5_room4_26-1_yaw90",
+      "sourceAssetId": "26-1_yaw90",
+      "sourceTypeId": "26-1",
+      "foregroundClipped": 0.0363,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        73.23493218538414,
+        159.364397961818,
+        -0.1884452878443123
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        561.6116026706984,
+        889.591387420279
+      ],
+      "cropOffsetPx": [
+        821,
+        909
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-077_30-7",
+      "id": "v5_room4_30-7",
+      "sourceAssetId": "30-7",
+      "sourceTypeId": "30-7",
+      "foregroundClipped": 0.1201,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        214.6680118482871,
+        18.360055716017143,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1408.92386839681,
+        889.5421013464563
+      ],
+      "cropOffsetPx": [
+        958,
+        829
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-063_8-4",
+      "id": "v5_room4_8-4",
+      "sourceAssetId": "8-4",
+      "sourceTypeId": "8-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        53.6206964379737,
+        185.20667919187818,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        425.24205173828653,
+        898.2410634447779
+      ],
+      "cropOffsetPx": [
+        942,
+        884
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-051_5-1",
+      "id": "v5_room4_5-1",
+      "sourceAssetId": "5-1",
+      "sourceTypeId": "5-1",
+      "foregroundClipped": 0.0625,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        193.7002815752061,
+        47.143430500461804,
+        -0.19156008599049928
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        1259.670553224233,
+        901.9694048121424
+      ],
+      "cropOffsetPx": [
+        823,
+        908
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-005_30-3",
+      "id": "v5_room4_30-3_yaw90",
+      "sourceAssetId": "30-3_yaw90",
+      "sourceTypeId": "30-3",
+      "foregroundClipped": 0.121,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        115.56371863358427,
+        137.92184827742122,
+        -0.5071427728138527
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        752.9256110684892,
+        922.0917118967095
+      ],
+      "cropOffsetPx": [
+        667,
+        831
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-143_9-7",
+      "id": "v5_room4_9-7_yaw90",
+      "sourceAssetId": "9-7_yaw90",
+      "sourceTypeId": "9-7",
+      "foregroundClipped": 0.0064,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        97.16592984931977,
+        157.1193464347487,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        640.1397502437133,
+        921.4279144261027
+      ],
+      "cropOffsetPx": [
+        893,
+        923
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-124_6-3",
+      "id": "v5_room4_6-3",
+      "sourceAssetId": "6-3",
+      "sourceTypeId": "6-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        218.9634620464202,
+        39.854540082844494,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1357.326765890727,
+        928.2270031938971
+      ],
+      "cropOffsetPx": [
+        824,
+        906
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-186_17-2",
+      "id": "v5_room4_17-2",
+      "sourceAssetId": "17-2",
+      "sourceTypeId": "17-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        85.20752895237715,
+        178.72251419473145,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        539.4550442729371,
+        935.8950647206628
+      ],
+      "cropOffsetPx": [
+        726,
+        708
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-090_16-5",
+      "id": "v5_room4_16-5_yaw90",
+      "sourceAssetId": "16-5_yaw90",
+      "sourceTypeId": "16-5",
+      "foregroundClipped": 0.0823,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        223.7007023540971,
+        40.64126575786449,
+        1.544186279425891
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        1369.1783097886978,
+        930.839249489342
+      ],
+      "cropOffsetPx": [
+        822,
+        909
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-188_30-4",
+      "id": "v5_room4_30-4_yaw90",
+      "sourceAssetId": "30-4_yaw90",
+      "sourceTypeId": "30-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-186_17-2"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        221.75734365426817,
+        43.19345600989615,
+        1.7357463654163903
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1355.691662933116,
+        931.0486601190055
+      ],
+      "cropOffsetPx": [
+        845,
+        910
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-190_43-1",
+      "id": "v5_room4_43-1",
+      "sourceAssetId": "43-1",
+      "sourceTypeId": "43-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-186_17-2"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        64.33463199802442,
+        206.8148724895408,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        392.5592785254509,
+        946.7242567313479
+      ],
+      "cropOffsetPx": [
+        890,
+        933
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-046_29-3",
+      "id": "v5_room4_29-3_yaw90",
+      "sourceAssetId": "29-3_yaw90",
+      "sourceTypeId": "29-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        123.98336507074113,
+        162.49916176536587,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        704.4526099161258,
+        969.7237902541605
+      ],
+      "cropOffsetPx": [
+        799,
+        887
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-079_11-5",
+      "id": "v5_room4_11-5",
+      "sourceAssetId": "11-5",
+      "sourceTypeId": "11-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        16.92791266855145,
+        269.56594768170567,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        62.0858949605373,
+        969.7407905253856
+      ],
+      "cropOffsetPx": [
+        842,
+        818
+      ],
+      "pixelsPerUnit": 189.87341772151896,
+      "editorId": "room4-100_49-8",
+      "id": "v5_room4_49-8",
+      "sourceAssetId": "49-8",
+      "sourceTypeId": "49-8",
+      "foregroundClipped": 0.0002,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "sink_counter",
+      "anchorWorld": [
+        7.217527138025444,
+        211.33322564936068,
+        86.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        207.6529044659942,
+        551.8419523620493
+      ],
+      "cropOffsetPx": [
+        946,
+        797
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-066_8-8",
+      "id": "v5_room4_8-8",
+      "sourceAssetId": "8-8",
+      "sourceTypeId": "8-8",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "sink_counter"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        79.86241118061857,
+        211.86506349101046,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        423.99204306882433,
+        977.5912120074436
+      ],
+      "cropOffsetPx": [
+        815,
+        776
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-069_16-6",
+      "id": "v5_room4_16-6",
+      "sourceAssetId": "16-6",
+      "sourceTypeId": "16-6",
+      "foregroundClipped": 0.0394,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        155.20634688222012,
+        143.0771815773728,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        856.3874959145419,
+        987.4252926893894
+      ],
+      "cropOffsetPx": [
+        821,
+        903
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-089_16-8",
+      "id": "v5_room4_16-8",
+      "sourceAssetId": "16-8",
+      "sourceTypeId": "16-8",
+      "foregroundClipped": 0.0109,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        72.08166525153561,
+        229.12540708485778,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        348.8687745000335,
+        991.8106085045902
+      ],
+      "cropOffsetPx": [
+        908,
+        895
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-013_27-4",
+      "id": "v5_room4_27-4",
+      "sourceAssetId": "27-4",
+      "sourceTypeId": "27-4",
+      "foregroundClipped": 0.0866,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        215.99327870142733,
+        86.0762753355469,
+        -0.19311748506359278
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1209.7510100976413,
+        993.8138900036844
+      ],
+      "cropOffsetPx": [
+        817,
+        898
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-136_30-1",
+      "id": "v5_room4_30-1",
+      "sourceAssetId": "30-1",
+      "sourceTypeId": "30-1",
+      "foregroundClipped": 0.1435,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        206.51315349545285,
+        96.968553949538,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        1148.6337986377446,
+        995.2225611674863
+      ],
+      "cropOffsetPx": [
+        809,
+        841
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-070_16-9",
+      "id": "v5_room4_16-9_yaw90",
+      "sourceAssetId": "16-9_yaw90",
+      "sourceTypeId": "16-9",
+      "foregroundClipped": 0.0031,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        142.06540480781956,
+        163.00579242333126,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        757.1788371534649,
+        997.6067958467262
+      ],
+      "cropOffsetPx": [
+        908,
+        899
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-012_27-2",
+      "id": "v5_room4_27-2",
+      "sourceAssetId": "27-2",
+      "sourceTypeId": "27-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        101.28590964654404,
+        205.73245417804915,
+        -0.19311748506359278
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        506.66036640548464,
+        1001.2371046851129
+      ],
+      "cropOffsetPx": [
+        816,
+        906
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-134_30-5",
+      "id": "v5_room4_30-5",
+      "sourceAssetId": "30-5",
+      "sourceTypeId": "30-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        33.15182430097377,
+        275.8576045931491,
+        -0.07774123700285429
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        91.8826591234739,
+        1003.7997828851289
+      ],
+      "cropOffsetPx": [
+        834,
+        877
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-014_26-2",
+      "id": "v5_room4_26-2",
+      "sourceAssetId": "26-2",
+      "sourceTypeId": "26-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        245.35570655133927,
+        64.58952002547215,
+        -0.19156008599049928
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1362.2985595776013,
+        1005.6216765638578
+      ],
+      "cropOffsetPx": [
+        818,
+        908
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-132_30-3",
+      "id": "v5_room4_30-3",
+      "sourceAssetId": "30-3",
+      "sourceTypeId": "30-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        128.40945252965415,
+        126.1147414467948,
+        72.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        826.8841332485781,
+        657.2413987440902
+      ],
+      "cropOffsetPx": [
+        843,
+        910
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-033_9-5",
+      "id": "v5_room4_9-5",
+      "sourceAssetId": "9-5",
+      "sourceTypeId": "9-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        245.91801024882787,
+        69.49344202743141,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        1349.2737046641894,
+        1013.117178414389
+      ],
+      "cropOffsetPx": [
+        793,
+        922
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-041_14-3",
+      "id": "v5_room4_14-3_yaw90",
+      "sourceAssetId": "14-3_yaw90",
+      "sourceTypeId": "14-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "sink_counter",
+      "anchorWorld": [
+        35.50588237241964,
+        215.65891738714853,
+        86.203506980416
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        279.5408949558133,
+        600.0152904286516
+      ],
+      "cropOffsetPx": [
+        701,
+        851
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-036_42-3",
+      "id": "v5_room4_42-3_yaw90",
+      "sourceAssetId": "42-3_yaw90",
+      "sourceTypeId": "42-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "sink_counter"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        101.91591418222029,
+        223.2267949324532,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        456.0673577493013,
+        1027.7140636720103
+      ],
+      "cropOffsetPx": [
+        808,
+        850
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-071_16-10",
+      "id": "v5_room4_16-10",
+      "sourceAssetId": "16-10",
+      "sourceTypeId": "16-10",
+      "foregroundClipped": 0.1533,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        205.4034095510774,
+        121.77220574658861,
+        -0.19156008599049928
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1070.8936114134663,
+        1031.4672596451396
+      ],
+      "cropOffsetPx": [
+        818,
+        906
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-084_30-4",
+      "id": "v5_room4_30-4",
+      "sourceAssetId": "30-4",
+      "sourceTypeId": "30-4",
+      "foregroundClipped": 0.0196,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "sink_counter",
+      "anchorWorld": [
+        11.076979276343245,
+        250.73100683602527,
+        85.8068825149364
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        101.03791732095385,
+        617.4373612977458
+      ],
+      "cropOffsetPx": [
+        822,
+        904
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-135_30-2",
+      "id": "v5_room4_30-2_yaw90",
+      "sourceAssetId": "30-2_yaw90",
+      "sourceTypeId": "30-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "sink_counter"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        260.8040980313938,
+        73.94177925587469,
+        0.32500000000000284
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1380.5869563265574,
+        1040.9246896812958
+      ],
+      "cropOffsetPx": [
+        854,
+        855
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-149_11-1",
+      "id": "v5_room4_11-1",
+      "sourceAssetId": "11-1",
+      "sourceTypeId": "11-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-041_14-3"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        122.51047073775003,
+        213.55846169504102,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        546.856027128127,
+        1044.1033986491866
+      ],
+      "cropOffsetPx": [
+        812,
+        884
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-062_8-3",
+      "id": "v5_room4_8-3",
+      "sourceAssetId": "8-3",
+      "sourceTypeId": "8-3",
+      "foregroundClipped": 0.0939,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        146.1565742512407,
+        132.20588511479102,
+        72.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        861.852067409349,
+        692.9987968284643
+      ],
+      "cropOffsetPx": [
+        822,
+        800
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-153_4-5",
+      "id": "v5_room4_4-5",
+      "sourceAssetId": "4-5",
+      "sourceTypeId": "4-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        112.93334847436736,
+        225.37520907965825,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        482.6744181841274,
+        1047.4628363310385
+      ],
+      "cropOffsetPx": [
+        816,
+        884
+      ],
+      "pixelsPerUnit": 171.43137033093538,
+      "editorId": "room4-202_8-1",
+      "id": "v5_room4_8-1_yaw90",
+      "sourceAssetId": "8-1_yaw90",
+      "sourceTypeId": "8-1",
+      "foregroundClipped": 0.0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        149.06415393873687,
+        191.11641197880186,
+        -0.19311748506359278
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        693.843225879805,
+        1050.980407824531
+      ],
+      "cropOffsetPx": [
+        816,
+        906
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-003_30-5",
+      "id": "v5_room4_30-5",
+      "sourceAssetId": "30-5",
+      "sourceTypeId": "30-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        124.89920184033335,
+        157.5704446526862,
+        71.49285722718615
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        721.9862715629414,
+        701.0229390491473
+      ],
+      "cropOffsetPx": [
+        668,
+        817
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-117_9-7",
+      "id": "v5_room4_9-7",
+      "sourceAssetId": "9-7",
+      "sourceTypeId": "9-7",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        230.96610981879178,
+        110.55144880700838,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1181.24398303535,
+        1052.2763379387002
+      ],
+      "cropOffsetPx": [
+        839,
+        897
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-172_14-2",
+      "id": "v5_room4_14-2",
+      "sourceAssetId": "14-2",
+      "sourceTypeId": "14-2",
+      "foregroundClipped": 0.0581,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        165.39070908684667,
+        125.56282415953511,
+        72.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        939.4836547819347,
+        711.8854076489895
+      ],
+      "cropOffsetPx": [
+        854,
+        871
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-080_11-3",
+      "id": "v5_room4_11-3",
+      "sourceAssetId": "11-3",
+      "sourceTypeId": "11-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        214.48926607013567,
+        136.40801133150657,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1054.2437642158873,
+        1066.3459161024634
+      ],
+      "cropOffsetPx": [
+        849,
+        905
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-173_14-4",
+      "id": "v5_room4_14-4",
+      "sourceAssetId": "14-4",
+      "sourceTypeId": "14-4",
+      "foregroundClipped": 0.0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        215.34758327149123,
+        133.69072607058217,
+        -0.1883927728138527
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        1064.9705716027272,
+        1064.2496632600432
+      ],
+      "cropOffsetPx": [
+        667,
+        831
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-195_9-7",
+      "id": "v5_room4_9-7_yaw90",
+      "sourceAssetId": "9-7_yaw90",
+      "sourceTypeId": "9-7",
+      "foregroundClipped": 0.0288,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-173_14-4"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        184.36855330695204,
+        166.9600581112873,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        872.2254855869942,
+        1066.992917127359
+      ],
+      "cropOffsetPx": [
+        892,
+        918
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-043_29-4",
+      "id": "v5_room4_29-4",
+      "sourceAssetId": "29-4",
+      "sourceTypeId": "29-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        251.8840600764401,
+        102.10587516308516,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        1269.334554740065,
+        1070.984902859288
+      ],
+      "cropOffsetPx": [
+        858,
+        908
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-182_8-9",
+      "id": "v5_room4_8-9_yaw90",
+      "sourceAssetId": "8-9_yaw90",
+      "sourceTypeId": "8-9",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        147.51555905492953,
+        207.3864205703352,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        640.387415453783,
+        1072.3529694378972
+      ],
+      "cropOffsetPx": [
+        790,
+        888
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-158_17-4",
+      "id": "v5_room4_17-4",
+      "sourceAssetId": "17-4",
+      "sourceTypeId": "17-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        144.44865614341177,
+        206.65285099215077,
+        2.129571171015067
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        633.387415453783,
+        1058.8277165934514
+      ],
+      "cropOffsetPx": [
+        776,
+        866
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-167_16-4",
+      "id": "v5_room4_16-4",
+      "sourceAssetId": "16-4",
+      "sourceTypeId": "16-4",
+      "foregroundClipped": 0.0,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-158_17-4"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        54.91550585228589,
+        300.7762307057452,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        82.41782543962199,
+        1073.5376048370467
+      ],
+      "cropOffsetPx": [
+        787,
+        803
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-067_16-3",
+      "id": "v5_room4_16-3",
+      "sourceAssetId": "16-3",
+      "sourceTypeId": "16-3",
+      "foregroundClipped": 0.025,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        147.80665702137415,
+        208.34418520344644,
+        2.129571171015067
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        638.3874154537831,
+        1066.4017192273386
+      ],
+      "cropOffsetPx": [
+        786,
+        705
+      ],
+      "pixelsPerUnit": 185.18518518518516,
+      "editorId": "room4-200_47-5",
+      "id": "v5_room4_47-5",
+      "sourceAssetId": "47-5",
+      "sourceTypeId": "47-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-158_17-4"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        242.51853845385446,
+        116.87878934374929,
+        0.34062500000000284
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1196.9192473303156,
+        1077.8444555309522
+      ],
+      "cropOffsetPx": [
+        921,
+        905
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-193_21-4",
+      "id": "v5_room4_21-4",
+      "sourceAssetId": "21-4",
+      "sourceTypeId": "21-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-172_14-2"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "sink_counter",
+      "anchorWorld": [
+        41.34915847200507,
+        253.46691345939996,
+        86.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        183.64673503781535,
+        666.2399310780776
+      ],
+      "cropOffsetPx": [
+        905,
+        919
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-009_27-1",
+      "id": "v5_room4_27-1",
+      "sourceAssetId": "27-1",
+      "sourceTypeId": "27-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "sink_counter"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "sink_counter",
+      "anchorWorld": [
+        52.375994771956684,
+        245.98816663369547,
+        86.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        239.16348441478374,
+        671.5620652894482
+      ],
+      "cropOffsetPx": [
+        942,
+        892
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-050_5-2",
+      "id": "v5_room4_5-2",
+      "sourceAssetId": "5-2",
+      "sourceTypeId": "5-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "sink_counter"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        186.24473874945068,
+        125.39825157162618,
+        72.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1002.5394615334735,
+        742.9195932610321
+      ],
+      "cropOffsetPx": [
+        824,
+        829
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-021_1-16",
+      "id": "v5_room4_1-16",
+      "sourceAssetId": "1-16",
+      "sourceTypeId": "1-16",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        144.2059627451317,
+        172.22242715778282,
+        72.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        735.9506067620466,
+        750.0976926337885
+      ],
+      "cropOffsetPx": [
+        866,
+        861
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-144_9-1",
+      "id": "v5_room4_9-1",
+      "sourceAssetId": "9-1",
+      "sourceTypeId": "9-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        153.35109391846746,
+        164.6500418233787,
+        72.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        786.1031562852663,
+        752.456811392186
+      ],
+      "cropOffsetPx": [
+        859,
+        911
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-181_8-7",
+      "id": "v5_room4_8-7",
+      "sourceAssetId": "8-7",
+      "sourceTypeId": "8-7",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        245.90998795447928,
+        131.2104963774642,
+        -0.19311748506359278
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        1164.0984747310451,
+        1106.3902854461383
+      ],
+      "cropOffsetPx": [
+        821,
+        907
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-007_30-1",
+      "id": "v5_room4_30-1_yaw90",
+      "sourceAssetId": "30-1_yaw90",
+      "sourceTypeId": "30-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        168.97309818723437,
+        149.67587500259484,
+        72.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        877.8916695539185,
+        753.4285675641606
+      ],
+      "cropOffsetPx": [
+        940,
+        967
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-140_21-1",
+      "id": "v5_room4_21-1_yaw90",
+      "sourceAssetId": "21-1_yaw90",
+      "sourceTypeId": "21-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        278.8874032468216,
+        98.90355119894821,
+        -0.1931174850635955
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1359.95155614362,
+        1107.3959906168777
+      ],
+      "cropOffsetPx": [
+        817,
+        896
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-008_30-2",
+      "id": "v5_room4_30-2",
+      "sourceAssetId": "30-2",
+      "sourceTypeId": "30-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        201.13313712381108,
+        124.13116222498459,
+        72.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1051.0059246964795,
+        763.3515568026103
+      ],
+      "cropOffsetPx": [
+        837,
+        879
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-154_4-4",
+      "id": "v5_room4_4-4",
+      "sourceAssetId": "4-4",
+      "sourceTypeId": "4-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        175.26885158935747,
+        150.39710130842525,
+        72.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        894.6152508427966,
+        763.9540371260908
+      ],
+      "cropOffsetPx": [
+        846,
+        768
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-131_28-3",
+      "id": "v5_room4_28-3_yaw90",
+      "sourceAssetId": "28-3_yaw90",
+      "sourceTypeId": "28-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        82.28960839511252,
+        303.1267097271926,
+        -0.19156008599049928
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        157.48869600375974,
+        1118.8283138820982
+      ],
+      "cropOffsetPx": [
+        818,
+        906
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-083_30-4",
+      "id": "v5_room4_30-4",
+      "sourceAssetId": "30-4",
+      "sourceTypeId": "30-4",
+      "foregroundClipped": 0.2055,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        124.8819377422026,
+        203.66138969268292,
+        72.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        583.6616441485589,
+        768.270098931745
+      ],
+      "cropOffsetPx": [
+        935,
+        971
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-139_21-2",
+      "id": "v5_room4_21-2",
+      "sourceAssetId": "21-2",
+      "sourceTypeId": "21-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        174.36657906635347,
+        212.99677654263905,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        704.1094075711433,
+        1121.045033413489
+      ],
+      "cropOffsetPx": [
+        830,
+        921
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-110_7-5",
+      "id": "v5_room4_7-5",
+      "sourceAssetId": "7-5",
+      "sourceTypeId": "7-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        162.01051101457833,
+        170.80432427440599,
+        72.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        793.618560220517,
+        774.6773607128932
+      ],
+      "cropOffsetPx": [
+        795,
+        838
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-116_9-9",
+      "id": "v5_room4_9-9_yaw90",
+      "sourceAssetId": "9-9_yaw90",
+      "sourceTypeId": "9-9",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        240.51976729713778,
+        152.25025759213872,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1084.808529114997,
+        1129.1550373339146
+      ],
+      "cropOffsetPx": [
+        853,
+        941
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-044_29-1",
+      "id": "v5_room4_29-1",
+      "sourceAssetId": "29-1",
+      "sourceTypeId": "29-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        72.91537956287283,
+        321.84415953946007,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        73.21366007023835,
+        1132.1393086534995
+      ],
+      "cropOffsetPx": [
+        846,
+        841
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-142_9-4",
+      "id": "v5_room4_9-4",
+      "sourceAssetId": "9-4",
+      "sourceTypeId": "9-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        204.6268745327735,
+        192.7306859712667,
+        0.2733675856334265
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        855.6885656845204,
+        1135.0319241105326
+      ],
+      "cropOffsetPx": [
+        597,
+        456
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-001_42-5",
+      "id": "v5_room4_42-5_yaw90",
+      "sourceAssetId": "42-5_yaw90",
+      "sourceTypeId": "42-5",
+      "foregroundClipped": 0.0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        178.0827998161155,
+        194.5057799850428,
+        0.45903797935771257
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        770.7310594932181,
+        1097.1962564687606
+      ],
+      "cropOffsetPx": [
+        817,
+        898
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-087_30-1",
+      "id": "v5_room4_30-1",
+      "sourceAssetId": "30-1",
+      "sourceTypeId": "30-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-001_42-5"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        200.3512003825916,
+        182.55823151805447,
+        0.6521554644213053
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        873.3789065936114,
+        1111.9679756697692
+      ],
+      "cropOffsetPx": [
+        839,
+        897
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-040_14-2",
+      "id": "v5_room4_14-2",
+      "sourceAssetId": "14-2",
+      "sourceTypeId": "14-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-001_42-5"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        197.42954543282116,
+        185.23032656828403,
+        0.9927804644213054
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        856.5976565936114,
+        1110.3420996550044
+      ],
+      "cropOffsetPx": [
+        809,
+        839
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-170_16-9",
+      "id": "v5_room4_16-9",
+      "sourceAssetId": "16-9",
+      "sourceTypeId": "16-9",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-040_14-2"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        110.92069229839439,
+        299.2909193618381,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        254.8893188096688,
+        1155.3174174903488
+      ],
+      "cropOffsetPx": [
+        821,
+        903
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-068_16-8",
+      "id": "v5_room4_16-8",
+      "sourceAssetId": "16-8",
+      "sourceTypeId": "16-8",
+      "foregroundClipped": 0.1217,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        154.33406729104712,
+        201.54377538352955,
+        72.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        678.3708757225527,
+        809.2718717912817
+      ],
+      "cropOffsetPx": [
+        763,
+        844
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-081_11-2",
+      "id": "v5_room4_11-2",
+      "sourceAssetId": "11-2",
+      "sourceTypeId": "11-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        251.0073398122471,
+        167.91501501314974,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        1069.2769743972922,
+        1168.3835322380953
+      ],
+      "cropOffsetPx": [
+        830,
+        809
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-152_4-1",
+      "id": "v5_room4_4-1_yaw90",
+      "sourceAssetId": "4-1_yaw90",
+      "sourceTypeId": "4-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        235.806678736391,
+        125.18543421514278,
+        72.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        1151.8637335637447,
+        816.9432772067175
+      ],
+      "cropOffsetPx": [
+        798,
+        912
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-128_28-5",
+      "id": "v5_room4_28-5_yaw90",
+      "sourceAssetId": "28-5_yaw90",
+      "sourceTypeId": "28-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        202.4740776359751,
+        158.94086848958608,
+        72.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        950.5996274391671,
+        817.5775269677586
+      ],
+      "cropOffsetPx": [
+        799,
+        887
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-147_11-5",
+      "id": "v5_room4_11-5",
+      "sourceAssetId": "11-5",
+      "sourceTypeId": "11-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        185.03716945585336,
+        184.9036449424276,
+        71.8068825149364
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        820.4005735402773,
+        831.0758883250612
+      ],
+      "cropOffsetPx": [
+        817,
+        896
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-085_30-2",
+      "id": "v5_room4_30-2",
+      "sourceAssetId": "30-2",
+      "sourceTypeId": "30-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "lounger",
+      "anchorWorld": [
+        114.07651564555921,
+        288.9392149718052,
+        37.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        295.411902021262,
+        1008.5769152015803
+      ],
+      "cropOffsetPx": [
+        946,
+        797
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-102_8-8",
+      "id": "v5_room4_8-8",
+      "sourceAssetId": "8-8",
+      "sourceTypeId": "8-8",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "lounger"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        174.11381475961306,
+        201.92351691470873,
+        71.8084399140095
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        736.5708935347129,
+        840.2149419895401
+      ],
+      "cropOffsetPx": [
+        823,
+        908
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-075_30-3",
+      "id": "v5_room4_30-3_yaw90",
+      "sourceAssetId": "30-3_yaw90",
+      "sourceTypeId": "30-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        104.92505135480963,
+        330.29713216481605,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        143.88375756998073,
+        1192.8332752794386
+      ],
+      "cropOffsetPx": [
+        774,
+        815
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-168_16-5",
+      "id": "v5_room4_16-5",
+      "sourceAssetId": "16-5",
+      "sourceTypeId": "16-5",
+      "foregroundClipped": 0.0153,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        226.76470786949363,
+        150.13264677293773,
+        72.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1049.8961832896678,
+        840.8011397430639
+      ],
+      "cropOffsetPx": [
+        747,
+        873
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-157_17-6",
+      "id": "v5_room4_17-6",
+      "sourceAssetId": "17-6",
+      "sourceTypeId": "17-6",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        218.57102962107865,
+        136.93896852452266,
+        72.9229025747363
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1064.896183289668,
+        805.3291444122117
+      ],
+      "cropOffsetPx": [
+        804,
+        781
+      ],
+      "pixelsPerUnit": 172.41379310344828,
+      "editorId": "room4-201_47-3",
+      "id": "v5_room4_47-3",
+      "sourceAssetId": "47-3",
+      "sourceTypeId": "47-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table",
+      "restsOn": "room4-157_17-6"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "lounger_back",
+      "anchorWorld": [
+        79.73222690815547,
+        304.3988935748221,
+        97.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        146.0,
+        759.795923149514
+      ],
+      "cropOffsetPx": [
+        710,
+        535
+      ],
+      "pixelsPerUnit": 136.36363636363635,
+      "editorId": "room4-019_1-2",
+      "id": "v5_room4_1-2_yaw90_lounger_back",
+      "sourceAssetId": "1-2_yaw90_lounger_back",
+      "sourceTypeId": "1-2",
+      "foregroundClipped": 0.3189,
+      "repositioned": false,
+      "bearingRole": null
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        257.7106104666574,
+        179.62481730443835,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        1054.257379486657,
+        1196.0031416566435
+      ],
+      "cropOffsetPx": [
+        923,
+        930
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-141_21-3",
+      "id": "v5_room4_21-3_yaw90",
+      "sourceAssetId": "21-3_yaw90",
+      "sourceTypeId": "21-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        135.00758127522735,
+        303.35573660866294,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        314.9555339996932,
+        1197.5449768258354
+      ],
+      "cropOffsetPx": [
+        776,
+        866
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-072_16-4",
+      "id": "v5_room4_16-4",
+      "sourceAssetId": "16-4",
+      "sourceTypeId": "16-4",
+      "foregroundClipped": 0.0613,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        270.8482974068611,
+        135.78932022785963,
+        72.0
+      ],
+      "yaw3D": 270,
+      "imageAnchorPx": [
+        1225.1769315370043,
+        885.4115342314979
+      ],
+      "cropOffsetPx": [
+        557,
+        371
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-018_1-1",
+      "id": "v5_room4_1-1_yaw270_s4_075f67a",
+      "sourceAssetId": "1-1_yaw270_s4_075f67a",
+      "sourceTypeId": "1-1",
+      "foregroundClipped": 0,
+      "repositioned": false,
+      "bearingRole": null
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        308.77522456093845,
+        134.3671121238524,
+        -0.1931174850635955
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1343.2243373112583,
+        1205.4230639754094
+      ],
+      "cropOffsetPx": [
+        816,
+        906
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-183_30-5",
+      "id": "v5_room4_30-5",
+      "sourceAssetId": "30-5",
+      "sourceTypeId": "30-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        95.20968409108741,
+        354.28575799637747,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        42.77177828412982,
+        1214.2431631311974
+      ],
+      "cropOffsetPx": [
+        908,
+        895
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-010_27-4",
+      "id": "v5_room4_27-4",
+      "sourceAssetId": "27-4",
+      "sourceTypeId": "27-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        215.6025069978603,
+        234.46224003612187,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        763.4208008852154,
+        1215.0971205509732
+      ],
+      "cropOffsetPx": [
+        816,
+        884
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-178_8-1",
+      "id": "v5_room4_8-1_yaw90_scale2",
+      "sourceAssetId": "8-1_yaw90",
+      "sourceTypeId": "8-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        215.4986042661235,
+        176.23677504536232,
+        72.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        937.7854876622835,
+        863.0581767466456
+      ],
+      "cropOffsetPx": [
+        797,
+        930
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-042_14-4",
+      "id": "v5_room4_14-4_yaw90",
+      "sourceAssetId": "14-4_yaw90",
+      "sourceTypeId": "14-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        207.549166426652,
+        243.34170199219201,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        712.62239330338,
+        1216.336302628266
+      ],
+      "cropOffsetPx": [
+        857,
+        892
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-060_3-6",
+      "id": "v5_room4_3-6",
+      "sourceAssetId": "3-6",
+      "sourceTypeId": "3-6",
+      "foregroundClipped": 0.0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        251.58595827900686,
+        199.84652169382946,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        975.2183097555322,
+        1217.1487199592543
+      ],
+      "cropOffsetPx": [
+        816,
+        811
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-059_3-1",
+      "id": "v5_room4_3-1",
+      "sourceAssetId": "3-1",
+      "sourceTypeId": "3-1",
+      "foregroundClipped": 0.0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        158.74196037844314,
+        299.6121018793837,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        397.3895754971783,
+        1227.5310933867404
+      ],
+      "cropOffsetPx": [
+        822,
+        896
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-026_4-5",
+      "id": "v5_room4_4-5_yaw90",
+      "sourceAssetId": "4-5_yaw90",
+      "sourceTypeId": "4-5",
+      "foregroundClipped": 0.0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        231.471772106424,
+        168.68695085799823,
+        72.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        1008.3544637452774,
+        875.6931922260501
+      ],
+      "cropOffsetPx": [
+        816,
+        884
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-106_8-1",
+      "id": "v5_room4_8-1_yaw90_scale2",
+      "sourceAssetId": "8-1_yaw90",
+      "sourceTypeId": "8-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        250.24681930621242,
+        150.68712170661672,
+        72.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1118.6790927987872,
+        876.8560192986604
+      ],
+      "cropOffsetPx": [
+        861,
+        856
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-192_43-5",
+      "id": "v5_room4_43-5",
+      "sourceAssetId": "43-5",
+      "sourceTypeId": "43-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "lounger",
+      "anchorWorld": [
+        126.87801595380043,
+        302.97447558931924,
+        37.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        291.7106210934436,
+        1048.8320565902131
+      ],
+      "cropOffsetPx": [
+        825,
+        879
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-057_3-3",
+      "id": "v5_room4_3-3",
+      "sourceAssetId": "3-3",
+      "sourceTypeId": "3-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "lounger"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "lounger",
+      "anchorWorld": [
+        110.74913867279896,
+        320.33665892098605,
+        37.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        191.23743925543874,
+        1050.682015666211
+      ],
+      "cropOffsetPx": [
+        858,
+        905
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-103_8-9",
+      "id": "v5_room4_8-9",
+      "sourceAssetId": "8-9",
+      "sourceTypeId": "8-9",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "lounger"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "lounger",
+      "anchorWorld": [
+        108.24615373020046,
+        323.00848543688085,
+        37.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        175.71300487995882,
+        1050.9352780261556
+      ],
+      "cropOffsetPx": [
+        891,
+        941
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-045_29-2",
+      "id": "v5_room4_29-2",
+      "sourceAssetId": "29-2",
+      "sourceTypeId": "29-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "lounger"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        101.83196095419869,
+        364.7673414438432,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        31.193858531066553,
+        1239.8989535970627
+      ],
+      "cropOffsetPx": [
+        943,
+        780
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-064_8-2",
+      "id": "v5_room4_8-2",
+      "sourceAssetId": "8-2",
+      "sourceTypeId": "8-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        304.56656828494414,
+        163.592961994391,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1242.9208188716593,
+        1242.2392954190027
+      ],
+      "cropOffsetPx": [
+        941,
+        961
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-047_5-3",
+      "id": "v5_room4_5-3",
+      "sourceAssetId": "5-3",
+      "sourceTypeId": "5-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        320.0069195978894,
+        150.3310048314289,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1329.0277442993815,
+        1245.5068866439774
+      ],
+      "cropOffsetPx": [
+        798,
+        892
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-159_17-3",
+      "id": "v5_room4_17-3",
+      "sourceAssetId": "17-3",
+      "sourceTypeId": "17-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        262.2842685777903,
+        151.57834000629705,
+        72.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        1152.1177857144796,
+        896.2490206555478
+      ],
+      "cropOffsetPx": [
+        818,
+        814
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-189_43-4",
+      "id": "v5_room4_43-4_yaw90",
+      "sourceAssetId": "43-4_yaw90",
+      "sourceTypeId": "43-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "lounger",
+      "anchorWorld": [
+        144.22179223015294,
+        298.71512715653904,
+        37.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        356.5199952208417,
+        1068.4586983555716
+      ],
+      "cropOffsetPx": [
+        928,
+        922
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-125_6-2",
+      "id": "v5_room4_6-2",
+      "sourceAssetId": "6-2",
+      "sourceTypeId": "6-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "lounger"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        133.66949138041514,
+        343.8829709675391,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        189.3595612386282,
+        1256.3286935219312
+      ],
+      "cropOffsetPx": [
+        787,
+        803
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-187_16-3",
+      "id": "v5_room4_16-3",
+      "sourceAssetId": "16-3",
+      "sourceTypeId": "16-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        215.04512486509782,
+        203.82665092401405,
+        72.203506980416
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        853.6554218232513,
+        903.0150390714139
+      ],
+      "cropOffsetPx": [
+        701,
+        641
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-165_42-3",
+      "id": "v5_room4_42-3",
+      "sourceAssetId": "42-3",
+      "sourceTypeId": "42-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        151.16415634031185,
+        328.59570522089405,
+        -0.07427064606522908
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        287.70535335825343,
+        1259.9126801203988
+      ],
+      "cropOffsetPx": [
+        842,
+        933
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-016_26-3",
+      "id": "v5_room4_26-3_yaw90",
+      "sourceAssetId": "26-3_yaw90",
+      "sourceTypeId": "26-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        266.0726438331079,
+        214.68834901076167,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        974.1528844670387,
+        1261.1414892658045
+      ],
+      "cropOffsetPx": [
+        812,
+        884
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-105_8-3",
+      "id": "v5_room4_8-3",
+      "sourceAssetId": "8-3",
+      "sourceTypeId": "8-3",
+      "foregroundClipped": 0.0037,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        196.4339528250775,
+        285.3486075640932,
+        -0.19156008599049928
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        553.256035782953,
+        1263.3776772823967
+      ],
+      "cropOffsetPx": [
+        818,
+        906
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-004_30-4",
+      "id": "v5_room4_30-4",
+      "sourceAssetId": "30-4",
+      "sourceTypeId": "30-4",
+      "foregroundClipped": 0.3548,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        118.18608425618007,
+        363.7878777424344,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        83.1946195412371,
+        1262.9609429979216
+      ],
+      "cropOffsetPx": [
+        830,
+        849
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-151_4-1",
+      "id": "v5_room4_4-1",
+      "sourceAssetId": "4-1",
+      "sourceTypeId": "4-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        183.91008656893223,
+        299.4284955826323,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        473.44477295889976,
+        1265.0078732273469
+      ],
+      "cropOffsetPx": [
+        798,
+        925
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-176_11-7",
+      "id": "v5_room4_11-7",
+      "sourceAssetId": "11-7",
+      "sourceTypeId": "11-7",
+      "foregroundClipped": 0.1461,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "lounger",
+      "anchorWorld": [
+        137.08808813790958,
+        316.3309261457485,
+        37.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        282.2714859764832,
+        1084.181840701021
+      ],
+      "cropOffsetPx": [
+        784,
+        782
+      ],
+      "pixelsPerUnit": 171.43137033093538,
+      "editorId": "room4-092_16-1",
+      "id": "v5_room4_16-1_yaw90",
+      "sourceAssetId": "16-1_yaw90",
+      "sourceTypeId": "16-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "lounger"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        323.0927027901189,
+        160.32747590621864,
+        0.995659701489273
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1308.2956806517009,
+        1261.4719807053555
+      ],
+      "cropOffsetPx": [
+        874,
+        834
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-160_3-5",
+      "id": "v5_room4_3-5",
+      "sourceAssetId": "3-5",
+      "sourceTypeId": "3-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-159_17-3"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        232.80333538301733,
+        195.23451288398536,
+        72.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        932.7064674970959,
+        917.5118801799208
+      ],
+      "cropOffsetPx": [
+        797,
+        930
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-175_14-4",
+      "id": "v5_room4_14-4_yaw90",
+      "sourceAssetId": "14-4_yaw90",
+      "sourceTypeId": "14-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "lounger",
+      "anchorWorld": [
+        151.06536311400876,
+        306.3580706748246,
+        36.8084399140095
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        354.1218773175525,
+        1090.8923066574243
+      ],
+      "cropOffsetPx": [
+        822,
+        909
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-073_30-4",
+      "id": "v5_room4_30-4_yaw90",
+      "sourceAssetId": "30-4_yaw90",
+      "sourceTypeId": "30-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "lounger"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        218.50959343666386,
+        212.26296260797255,
+        72.48549351240253
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        838.7398924860739,
+        919.8301247781446
+      ],
+      "cropOffsetPx": [
+        845,
+        870
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-185_30-6",
+      "id": "v5_room4_30-6",
+      "sourceAssetId": "30-6",
+      "sourceTypeId": "30-6",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table",
+      "restsOn": "room4-165_42-3"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        225.87441136653092,
+        207.12226739177717,
+        72.48549351240253
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        876.2564319242613,
+        923.1663088486523
+      ],
+      "cropOffsetPx": [
+        816,
+        794
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-197_47-1",
+      "id": "v5_room4_47-1_yaw90",
+      "sourceAssetId": "47-1_yaw90",
+      "sourceTypeId": "47-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table",
+      "restsOn": "room4-165_42-3"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        168.26174872811413,
+        325.4894177671135,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        348.316992883002,
+        1280.6267497428414
+      ],
+      "cropOffsetPx": [
+        831,
+        919
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-112_7-7",
+      "id": "v5_room4_7-7",
+      "sourceAssetId": "7-7",
+      "sourceTypeId": "7-7",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        334.54236236266735,
+        160.84056472849622,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1341.1053929025134,
+        1283.0743906367452
+      ],
+      "cropOffsetPx": [
+        839,
+        897
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-174_14-2",
+      "id": "v5_room4_14-2",
+      "sourceAssetId": "14-2",
+      "sourceTypeId": "14-2",
+      "foregroundClipped": 0.0842,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        328.12761506815906,
+        169.0037814616435,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1297.3715008195466,
+        1285.6970947947038
+      ],
+      "cropOffsetPx": [
+        847,
+        906
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-038_14-3",
+      "id": "v5_room4_14-3",
+      "sourceAssetId": "14-3",
+      "sourceTypeId": "14-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        120.55341880212004,
+        379.0814854378204,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        44.41580009289896,
+        1289.4523563599105
+      ],
+      "cropOffsetPx": [
+        921,
+        905
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-137_21-4",
+      "id": "v5_room4_21-4",
+      "sourceAssetId": "21-4",
+      "sourceTypeId": "21-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        255.7630186866233,
+        188.17299386166616,
+        72.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1022.7700744748713,
+        941.3591266018509
+      ],
+      "cropOffsetPx": [
+        787,
+        803
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-166_16-3",
+      "id": "v5_room4_16-3",
+      "sourceAssetId": "16-3",
+      "sourceTypeId": "16-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        275.37021670369876,
+        227.97968318836666,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        962.1716005459962,
+        1295.0248498380981
+      ],
+      "cropOffsetPx": [
+        853,
+        825
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-191_43-2",
+      "id": "v5_room4_43-2",
+      "sourceAssetId": "43-2",
+      "sourceTypeId": "43-2",
+      "foregroundClipped": 0.0005,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        139.99586496383617,
+        363.4506289324611,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        149.63570809412522,
+        1295.1697408444459
+      ],
+      "cropOffsetPx": [
+        834,
+        890
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-101_4-3",
+      "id": "v5_room4_4-3_yaw90",
+      "sourceAssetId": "4-3_yaw90",
+      "sourceTypeId": "4-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        269.9290484723833,
+        239.1049084891636,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        912.4724199496591,
+        1303.5509354423202
+      ],
+      "cropOffsetPx": [
+        830,
+        921
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-122_7-5",
+      "id": "v5_room4_7-5",
+      "sourceAssetId": "7-5",
+      "sourceTypeId": "7-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        269.894253445883,
+        239.3826401927196,
+        -0.1931174850635955
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        911.5348397594902,
+        1304.624899406127
+      ],
+      "cropOffsetPx": [
+        817,
+        896
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-006_30-2",
+      "id": "v5_room4_30-2",
+      "sourceAssetId": "30-2",
+      "sourceTypeId": "30-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        214.90615371458784,
+        295.95990071472846,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        576.8387589995782,
+        1306.2990816439744
+      ],
+      "cropOffsetPx": [
+        920,
+        957
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-031_7-4",
+      "id": "v5_room4_7-4",
+      "sourceAssetId": "7-4",
+      "sourceTypeId": "7-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        196.80711972615885,
+        314.3108426496679,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        467.4888312294728,
+        1306.6769435637402
+      ],
+      "cropOffsetPx": [
+        920,
+        957
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-121_7-4",
+      "id": "v5_room4_7-4",
+      "sourceAssetId": "7-4",
+      "sourceTypeId": "7-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        135.2234334887383,
+        383.8709759316471,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        74.0573726712737,
+        1318.641614130578
+      ],
+      "cropOffsetPx": [
+        864,
+        687
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-199_47-2",
+      "id": "v5_room4_47-2",
+      "sourceAssetId": "47-2",
+      "sourceTypeId": "47-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        310.31646484138673,
+        208.93504597353535,
+        0.2885546737241724
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        1124.1442566035541,
+        1317.817048652104
+      ],
+      "cropOffsetPx": [
+        575,
+        489
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-000_42-2",
+      "id": "v5_room4_42-2_yaw90",
+      "sourceAssetId": "42-2_yaw90",
+      "sourceTypeId": "42-2",
+      "foregroundClipped": 0.0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        290.4586745180128,
+        223.5814644043702,
+        0.6883863235558222
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1020.6316303409278,
+        1308.5309155256411
+      ],
+      "cropOffsetPx": [
+        847,
+        906
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-171_14-3",
+      "id": "v5_room4_14-3",
+      "sourceAssetId": "14-3",
+      "sourceTypeId": "14-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-000_42-2"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        194.52491474438025,
+        325.5482857720994,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        426.92988691684263,
+        1320.1098007747196
+      ],
+      "cropOffsetPx": [
+        920,
+        957
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-119_7-4",
+      "id": "v5_room4_7-4",
+      "sourceAssetId": "7-4",
+      "sourceTypeId": "7-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "lounger",
+      "anchorWorld": [
+        189.46290576346615,
+        301.8283365969888,
+        37.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        482.9037074994321,
+        1140.990182816216
+      ],
+      "cropOffsetPx": [
+        678,
+        578
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-020_1-6",
+      "id": "v5_room4_1-6",
+      "sourceAssetId": "1-6",
+      "sourceTypeId": "1-6",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "lounger"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "lounger",
+      "anchorWorld": [
+        178.49567240433387,
+        301.4618778049792,
+        37.374025974025976
+      ],
+      "yaw3D": 270,
+      "imageAnchorPx": [
+        451.1013837980639,
+        1122.6153854091367
+      ],
+      "cropOffsetPx": [
+        857,
+        885
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-163_3-6",
+      "id": "v5_room4_3-6_yaw270",
+      "sourceAssetId": "3-6_yaw270",
+      "sourceTypeId": "3-6",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "lounger",
+      "restsOn": "room4-020_1-6"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        248.65064968131404,
+        276.6580593420863,
+        0.2764050032515757
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        735.9777710176833,
+        1326.9474867046224
+      ],
+      "cropOffsetPx": [
+        593,
+        473
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-002_42-1",
+      "id": "v5_room4_42-1",
+      "sourceAssetId": "42-1",
+      "sourceTypeId": "42-1",
+      "foregroundClipped": 0.0309,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        236.50917031898788,
+        274.5967167962933,
+        0.6594016362482087
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        705.7373605680837,
+        1304.236034356375
+      ],
+      "cropOffsetPx": [
+        926,
+        913
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-138_21-3",
+      "id": "v5_room4_21-3",
+      "sourceAssetId": "21-3",
+      "sourceTypeId": "21-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-002_42-1"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        256.7316842701025,
+        269.01954212258835,
+        0.4662841511846159
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        783.1364264425424,
+        1326.9136022207126
+      ],
+      "cropOffsetPx": [
+        816,
+        906
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-088_30-5",
+      "id": "v5_room4_30-5",
+      "sourceAssetId": "30-5",
+      "sourceTypeId": "30-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-002_42-1"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        175.47071521097325,
+        355.9757774020189,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        278.48481342686307,
+        1337.1697389194883
+      ],
+      "cropOffsetPx": [
+        830,
+        921
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-120_7-5",
+      "id": "v5_room4_7-5",
+      "sourceAssetId": "7-5",
+      "sourceTypeId": "7-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "outdoor_table",
+      "anchorWorld": [
+        266.03385692654126,
+        207.09434973330528,
+        71.8084399140095
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        996.818521579708,
+        985.8512544678272
+      ],
+      "cropOffsetPx": [
+        818,
+        906
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-133_30-4",
+      "id": "v5_room4_30-4",
+      "sourceAssetId": "30-4",
+      "sourceTypeId": "30-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "outdoor_table"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        184.66416068594813,
+        348.1903911031571,
+        0.24805577214884994
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        329.4213087483731,
+        1338.3704125793827
+      ],
+      "cropOffsetPx": [
+        635,
+        512
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-011_42-4",
+      "id": "v5_room4_42-4",
+      "sourceAssetId": "42-4",
+      "sourceTypeId": "42-4",
+      "foregroundClipped": 0.0122,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        172.2962933702032,
+        354.2765080747298,
+        0.5917706991971103
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        274.05935588642024,
+        1327.684897780755
+      ],
+      "cropOffsetPx": [
+        822,
+        800
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-096_4-5",
+      "id": "v5_room4_4-5",
+      "sourceAssetId": "4-5",
+      "sourceTypeId": "4-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-011_42-4"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "lounger",
+      "anchorWorld": [
+        216.05531350402777,
+        289.96017917032873,
+        37.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        598.2854030010972,
+        1163.0765582870686
+      ],
+      "cropOffsetPx": [
+        855,
+        849
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-196_9-2",
+      "id": "v5_room4_9-2",
+      "sourceAssetId": "9-2",
+      "sourceTypeId": "9-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "lounger"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        139.93397571303785,
+        399.6447240707679,
+        0.9784946236559193
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        40.867754926809994,
+        1345.772830859688
+      ],
+      "cropOffsetPx": [
+        857,
+        932
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-118_7-2",
+      "id": "v5_room4_7-2_yaw90",
+      "sourceAssetId": "7-2_yaw90",
+      "sourceTypeId": "7-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        232.4477923207295,
+        314.73084324414924,
+        0.9784946236559193
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        573.1508472297407,
+        1357.1727345312975
+      ],
+      "cropOffsetPx": [
+        857,
+        932
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-109_7-2",
+      "id": "v5_room4_7-2_yaw90",
+      "sourceAssetId": "7-2_yaw90",
+      "sourceTypeId": "7-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        162.3792768734654,
+        391.3456922523916,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        133.10075386322126,
+        1370.5874536887854
+      ],
+      "cropOffsetPx": [
+        814,
+        854
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-093_16-12",
+      "id": "v5_room4_16-12",
+      "sourceAssetId": "16-12",
+      "sourceTypeId": "16-12",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        214.26347153532134,
+        340.08499018964466,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        442.5354440370301,
+        1371.522692587449
+      ],
+      "cropOffsetPx": [
+        830,
+        921
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-028_7-5",
+      "id": "v5_room4_7-5",
+      "sourceAssetId": "7-5",
+      "sourceTypeId": "7-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        228.841946357893,
+        325.6739028522991,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        529.5041305167817,
+        1371.7737738152882
+      ],
+      "cropOffsetPx": [
+        875,
+        770
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-022_4-6",
+      "id": "v5_room4_4-6",
+      "sourceAssetId": "4-6",
+      "sourceTypeId": "4-6",
+      "foregroundClipped": 0.0344,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        221.9429070514009,
+        336.43055274882244,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        476.5370629077355,
+        1377.5601897003348
+      ],
+      "cropOffsetPx": [
+        928,
+        922
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-053_6-2",
+      "id": "v5_room4_6-2",
+      "sourceAssetId": "6-2",
+      "sourceTypeId": "6-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "lounger",
+      "anchorWorld": [
+        221.97656434403177,
+        306.86680227418947,
+        36.92434111755972
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        565.3292862095269,
+        1197.5963576875974
+      ],
+      "cropOffsetPx": [
+        839,
+        883
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-015_26-1",
+      "id": "v5_room4_26-1",
+      "sourceAssetId": "26-1",
+      "sourceTypeId": "26-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "lounger"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        159.79866874361,
+        408.03633346685683,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        75.28700583025943,
+        1391.7525033157003
+      ],
+      "cropOffsetPx": [
+        834,
+        933
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-111_7-6",
+      "id": "v5_room4_7-6",
+      "sourceAssetId": "7-6",
+      "sourceTypeId": "7-6",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        302.339724222781,
+        266.3238219894713,
+        -0.19311748506359278
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        928.0477066999291,
+        1393.7048782666016
+      ],
+      "cropOffsetPx": [
+        816,
+        906
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-074_30-5",
+      "id": "v5_room4_30-5",
+      "sourceAssetId": "30-5",
+      "sourceTypeId": "30-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        156.50977127901083,
+        417.0064041838476,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        38.51010128548978,
+        1400.2742631942876
+      ],
+      "cropOffsetPx": [
+        943,
+        780
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-179_8-2",
+      "id": "v5_room4_8-2",
+      "sourceAssetId": "8-2",
+      "sourceTypeId": "8-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        256.66620233505296,
+        321.19467251365813,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        626.4145894641845,
+        1406.7913122730665
+      ],
+      "cropOffsetPx": [
+        830,
+        809
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-025_4-1",
+      "id": "v5_room4_4-1_yaw90",
+      "sourceAssetId": "4-1_yaw90",
+      "sourceTypeId": "4-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        186.39128112519583,
+        393.18708613774675,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        199.61258496234723,
+        1409.3675508944139
+      ],
+      "cropOffsetPx": [
+        797,
+        930
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-039_14-4",
+      "id": "v5_room4_14-4_yaw90",
+      "sourceAssetId": "14-4_yaw90",
+      "sourceTypeId": "14-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        355.7271205621091,
+        233.60930563357653,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1186.3534447855977,
+        1424.0046392935285
+      ],
+      "cropOffsetPx": [
+        834,
+        820
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-150_4-3",
+      "id": "v5_room4_4-3",
+      "sourceAssetId": "4-3",
+      "sourceTypeId": "4-3",
+      "foregroundClipped": 0.0801,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        197.83029942095263,
+        396.1914054000391,
+        0.1256325149364072
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        224.9166820627404,
+        1430.5709538964425
+      ],
+      "cropOffsetPx": [
+        821,
+        907
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-076_30-1",
+      "id": "v5_room4_30-1_yaw90",
+      "sourceAssetId": "30-1_yaw90",
+      "sourceTypeId": "30-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-039_14-4"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        235.30626172193715,
+        360.05617186300435,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        445.75026957679825,
+        1433.0436503774122
+      ],
+      "cropOffsetPx": [
+        776,
+        866
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-091_16-4",
+      "id": "v5_room4_16-4",
+      "sourceAssetId": "16-4",
+      "sourceTypeId": "16-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        290.79994077856304,
+        305.38857204073065,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        776.2341062134972,
+        1434.2827692289407
+      ],
+      "cropOffsetPx": [
+        859,
+        911
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-104_8-7",
+      "id": "v5_room4_8-7",
+      "sourceAssetId": "8-7",
+      "sourceTypeId": "8-7",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        257.2897091068055,
+        339.62429658205144,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        572.9962375742622,
+        1435.3710085332855
+      ],
+      "cropOffsetPx": [
+        696,
+        788
+      ],
+      "pixelsPerUnit": 172.41379310344828,
+      "editorId": "room4-198_47-4",
+      "id": "v5_room4_47-4",
+      "sourceAssetId": "47-4",
+      "sourceTypeId": "47-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        330.43582521832406,
+        267.2369243342239,
+        -0.19156008599050267
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        1009.5967026523006,
+        1437.2129610274624
+      ],
+      "cropOffsetPx": [
+        823,
+        908
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-086_30-3",
+      "id": "v5_room4_30-3_yaw90",
+      "sourceAssetId": "30-3_yaw90",
+      "sourceTypeId": "30-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        184.4738421877435,
+        419.8225113820669,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        113.95399241702978,
+        1446.4445303547154
+      ],
+      "cropOffsetPx": [
+        782,
+        925
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-177_14-2",
+      "id": "v5_room4_14-2_yaw90",
+      "sourceAssetId": "14-2_yaw90",
+      "sourceTypeId": "14-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        285.7612984136165,
+        318.8805576229893,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        720.6422223718816,
+        1446.9627840549088
+      ],
+      "cropOffsetPx": [
+        830,
+        809
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-095_4-1",
+      "id": "v5_room4_4-1_yaw90",
+      "sourceAssetId": "4-1_yaw90",
+      "sourceTypeId": "4-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        315.30718060973385,
+        294.7821401693608,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        881.5751213211192,
+        1455.133981168642
+      ],
+      "cropOffsetPx": [
+        545,
+        637
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-155_17-5",
+      "id": "v5_room4_17-5_yaw90",
+      "sourceAssetId": "17-5_yaw90",
+      "sourceTypeId": "17-5",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        257.0929990722971,
+        356.22356419366184,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        522.6083046359058,
+        1459.9748448989385
+      ],
+      "cropOffsetPx": [
+        837,
+        879
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-094_4-4",
+      "id": "v5_room4_4-4",
+      "sourceAssetId": "4-4",
+      "sourceTypeId": "4-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        231.7516737187538,
+        389.2829180179238,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        347.40626710248995,
+        1471.5518876050164
+      ],
+      "cropOffsetPx": [
+        816,
+        811
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-162_3-1",
+      "id": "v5_room4_3-1",
+      "sourceAssetId": "3-1",
+      "sourceTypeId": "3-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        228.4973161977488,
+        394.58865173790394,
+        -0.19156008599049928
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        321.72599337953466,
+        1475.3327886021198
+      ],
+      "cropOffsetPx": [
+        818,
+        908
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-184_30-3",
+      "id": "v5_room4_30-3",
+      "sourceAssetId": "30-3",
+      "sourceTypeId": "30-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        255.09602648923752,
+        368.4025438333233,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        480.08044796774266,
+        1475.2478554838412
+      ],
+      "cropOffsetPx": [
+        787,
+        796
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-164_3-7",
+      "id": "v5_room4_3-7",
+      "sourceAssetId": "3-7",
+      "sourceTypeId": "3-7",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        214.202373007351,
+        410.59527162096106,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        230.8213041591698,
+        1477.196466942468
+      ],
+      "cropOffsetPx": [
+        921,
+        969
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-030_7-3",
+      "id": "v5_room4_7-3",
+      "sourceAssetId": "7-3",
+      "sourceTypeId": "7-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        360.8529114922042,
+        264.5240885948571,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1108.9864686920414,
+        1478.065500130592
+      ],
+      "cropOffsetPx": [
+        753,
+        876
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-156_17-7",
+      "id": "v5_room4_17-7",
+      "sourceAssetId": "17-7",
+      "sourceTypeId": "17-7",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        270.6656230871469,
+        362.6131223276807,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        544.1575022783986,
+        1489.9181181222414
+      ],
+      "cropOffsetPx": [
+        834,
+        820
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-024_4-3",
+      "id": "v5_room4_4-3",
+      "sourceAssetId": "4-3",
+      "sourceTypeId": "4-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        293.608051009415,
+        343.2235268336239,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        671.1535725273734,
+        1495.2473667645584
+      ],
+      "cropOffsetPx": [
+        761,
+        882
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-194_43-3",
+      "id": "v5_room4_43-3_yaw90",
+      "sourceAssetId": "43-3_yaw90",
+      "sourceTypeId": "43-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        366.8206820078274,
+        269.37474558358343,
+        0.9016864235929298
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1112.3378092727319,
+        1490.9801339184196
+      ],
+      "cropOffsetPx": [
+        856,
+        847
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-161_3-4",
+      "id": "v5_room4_3-4",
+      "sourceAssetId": "3-4",
+      "sourceTypeId": "3-4",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor",
+      "restsOn": "room4-156_17-7"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        222.95591721670704,
+        420.68488580540367,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        226.81309423391008,
+        1505.461204533166
+      ],
+      "cropOffsetPx": [
+        838,
+        924
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-027_7-1",
+      "id": "v5_room4_7-1",
+      "sourceAssetId": "7-1",
+      "sourceTypeId": "7-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        349.59750795603776,
+        295.5764706939812,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        982.0631117861697,
+        1507.7609679750285
+      ],
+      "cropOffsetPx": [
+        806,
+        885
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-129_28-7",
+      "id": "v5_room4_28-7",
+      "sourceAssetId": "28-7",
+      "sourceTypeId": "28-7",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        197.14214549759726,
+        449.20386350962855,
+        -1.082896991852192
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        63.81484596390601,
+        1513.4978311218879
+      ],
+      "cropOffsetPx": [
+        869,
+        830
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-058_3-2",
+      "id": "v5_room4_3-2_yaw90",
+      "sourceAssetId": "3-2_yaw90",
+      "sourceTypeId": "3-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        223.5644597770226,
+        422.5922652405854,
+        0.0
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        222.9165836093116,
+        1509.235087526412
+      ],
+      "cropOffsetPx": [
+        858,
+        908
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-108_8-9",
+      "id": "v5_room4_8-9_yaw90",
+      "sourceAssetId": "8-9_yaw90",
+      "sourceTypeId": "8-9",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        379.555589829656,
+        270.925150931963,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1145.891316693079,
+        1515.7211111424285
+      ],
+      "cropOffsetPx": [
+        893,
+        923
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-056_6-3",
+      "id": "v5_room4_6-3",
+      "sourceAssetId": "6-3",
+      "sourceTypeId": "6-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        215.25518885278598,
+        437.8296527661614,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        152.27660825987368,
+        1519.627262428421
+      ],
+      "cropOffsetPx": [
+        826,
+        819
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-049_49-7",
+      "id": "v5_room4_49-7",
+      "sourceAssetId": "49-7",
+      "sourceTypeId": "49-7",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        269.43668036844906,
+        385.9047360837479,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        470.5958328541035,
+        1523.0121246782955
+      ],
+      "cropOffsetPx": [
+        871,
+        802
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-023_4-8",
+      "id": "v5_room4_4-8",
+      "sourceAssetId": "4-8",
+      "sourceTypeId": "4-8",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        324.4061272520975,
+        332.8918628218332,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        794.542793290793,
+        1525.946985110896
+      ],
+      "cropOffsetPx": [
+        839,
+        759
+      ],
+      "pixelsPerUnit": 211.26760563380282,
+      "editorId": "room4-099_49-1",
+      "id": "v5_room4_49-1",
+      "sourceAssetId": "49-1",
+      "sourceTypeId": "49-1",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        372.1049211728385,
+        290.5308267002866,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1064.7222834176557,
+        1533.9536218096878
+      ],
+      "cropOffsetPx": [
+        893,
+        923
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-055_6-3",
+      "id": "v5_room4_6-3",
+      "sourceAssetId": "6-3",
+      "sourceTypeId": "6-3",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        285.0276347628631,
+        377.84606818964386,
+        0.978494623655914
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        541.5446997196577,
+        1530.71533561274
+      ],
+      "cropOffsetPx": [
+        866,
+        880
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-029_7-2",
+      "id": "v5_room4_7-2",
+      "sourceAssetId": "7-2",
+      "sourceTypeId": "7-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        338.30246509945016,
+        325.4368280641656,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        858.5969111058538,
+        1535.6089397454236
+      ],
+      "cropOffsetPx": [
+        859,
+        911
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-065_8-7",
+      "id": "v5_room4_8-7",
+      "sourceAssetId": "8-7",
+      "sourceTypeId": "8-7",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        250.28856191090958,
+        414.4442507967977,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        327.5329333423356,
+        1537.099219061561
+      ],
+      "cropOffsetPx": [
+        928,
+        922
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-126_6-2",
+      "id": "v5_room4_6-2",
+      "sourceAssetId": "6-2",
+      "sourceTypeId": "6-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        396.90455506901907,
+        268.5993628641041,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        1204.9155766147449,
+        1538.2558768996846
+      ],
+      "cropOffsetPx": [
+        855,
+        849
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-145_9-2",
+      "id": "v5_room4_9-2",
+      "sourceAssetId": "9-2",
+      "sourceTypeId": "9-2",
+      "foregroundClipped": 0.0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    },
+    {
+      "cameraId": "amochi_scene4_ortho45_30_v5",
+      "support": "floor",
+      "anchorWorld": [
+        269.15449523244826,
+        397.38823265568413,
+        0.0
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        435.2987877302923,
+        1539.8140918321988
+      ],
+      "cropOffsetPx": [
+        928,
+        922
+      ],
+      "pixelsPerUnit": 149.99999999999997,
+      "editorId": "room4-052_6-2",
+      "id": "v5_room4_6-2",
+      "sourceAssetId": "6-2",
+      "sourceTypeId": "6-2",
+      "foregroundClipped": 0,
+      "repositioned": true,
+      "bearingRole": "floor"
+    }
+  ]
+}

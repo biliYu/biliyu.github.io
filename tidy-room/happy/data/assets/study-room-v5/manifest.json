@@ -1,0 +1,945 @@
+{
+  "title": "我的书房",
+  "version": 5,
+  "sourceArt": "art-generated/study_illustrated_v5_full",
+  "revision": "full_thin_rulers",
+  "shadowMode": "none",
+  "sourceLayout": "art-generated/study_illustrated_v5_full/source_layout.json",
+  "cameraId": "study_ortho_45_30_v1",
+  "sceneCanvas": [
+    1111,
+    1415
+  ],
+  "background": "study_v5_room",
+  "uniqueTypes": 25,
+  "instances": [
+    {
+      "sourceIndex": 0,
+      "sourceId": "103-2",
+      "id": "study_v5_103-2",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "back",
+      "anchorWorld": [
+        315,
+        240,
+        310
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        729.0820393249937,
+        892.6155598492736
+      ],
+      "cropOffsetPx": [
+        138,
+        105
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 1,
+      "sourceId": "103-1",
+      "id": "study_v5_103-1",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "back",
+      "anchorWorld": [
+        315,
+        240,
+        310
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        729.0820393249937,
+        892.6155598492736
+      ],
+      "cropOffsetPx": [
+        96,
+        89
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 2,
+      "sourceId": "103-3",
+      "id": "study_v5_103-3",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "seat",
+      "anchorWorld": [
+        315.7477628140231,
+        316.9081899576097,
+        171
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        660.9620824096017,
+        1079.6112286866867
+      ],
+      "cropOffsetPx": [
+        219,
+        252
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 3,
+      "sourceId": "103-6",
+      "id": "study_v5_103-6",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "desk",
+      "anchorWorld": [
+        75.67692455252192,
+        326.47562495348734,
+        323
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        437.67882289393503,
+        810.0193154557198
+      ],
+      "cropOffsetPx": [
+        97,
+        298
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 4,
+      "sourceId": "102-3",
+      "id": "study_v5_102-3",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "desk",
+      "anchorWorld": [
+        161.38912460336604,
+        227.02981582515946,
+        323
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        603.2891809351985,
+        803.8774587609876
+      ],
+      "cropOffsetPx": [
+        392,
+        419
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 5,
+      "sourceId": "100-5",
+      "id": "study_v5_100-5_a",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "shelf",
+      "anchorWorld": [
+        36.03526675553401,
+        215.45498378832548,
+        565
+      ],
+      "yaw3D": 100,
+      "imageAnchorPx": [
+        501.52212648436057,
+        477.543369198067
+      ],
+      "cropOffsetPx": [
+        205,
+        316
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 6,
+      "sourceId": "100-6",
+      "id": "study_v5_100-6",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "desk",
+      "anchorWorld": [
+        148.37929799902176,
+        151.1381578551204,
+        323
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        659.5324007285473,
+        764.1195061991937
+      ],
+      "cropOffsetPx": [
+        301,
+        337
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 7,
+      "sourceId": "100-5",
+      "id": "study_v5_100-5_b",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "shelf",
+      "anchorWorld": [
+        27.73091183114768,
+        249.63988209046295,
+        573.4131746054736
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        463.5185830732768,
+        479.90132903222855
+      ],
+      "cropOffsetPx": [
+        267,
+        306
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 8,
+      "sourceId": "102-1",
+      "id": "study_v5_102-1",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "desk",
+      "anchorWorld": [
+        80.9993760714384,
+        176.7614808507408,
+        323
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        576.3477696180089,
+        745.4453874549806
+      ],
+      "cropOffsetPx": [
+        88,
+        85
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 9,
+      "sourceId": "102-5",
+      "id": "study_v5_102-5",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "desk",
+      "anchorWorld": [
+        56.848342944132796,
+        225.62320118135534,
+        337
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        511.04317763547203,
+        741.1601111163026
+      ],
+      "cropOffsetPx": [
+        360,
+        364
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 10,
+      "sourceId": "102-6",
+      "id": "study_v5_102-6",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "seat",
+      "anchorWorld": [
+        306.7349439076954,
+        337.7205794102929,
+        190
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        634.2856050760645,
+        1064.0746998708814
+      ],
+      "cropOffsetPx": [
+        317,
+        382
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 11,
+      "sourceId": "100-1",
+      "id": "study_v5_100-1",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "seat",
+      "anchorWorld": [
+        312.0041737377108,
+        361.05006243140946,
+        204
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        618.1320235456005,
+        1061.5282014615623
+      ],
+      "cropOffsetPx": [
+        256,
+        287
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 12,
+      "sourceId": "102-4",
+      "id": "study_v5_102-4",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "desk",
+      "anchorWorld": [
+        56.60400385494797,
+        158.82187811403733,
+        337
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        570.5735538564601,
+        711.1763794806176
+      ],
+      "cropOffsetPx": [
+        417,
+        447
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 13,
+      "sourceId": "104-1",
+      "id": "study_v5_104-1",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "shelf",
+      "anchorWorld": [
+        34.91984968979873,
+        372.97554761400846,
+        565
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        359.63379170413305,
+        547.4898772352817
+      ],
+      "cropOffsetPx": [
+        257,
+        238
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 14,
+      "sourceId": "104-2",
+      "id": "study_v5_104-2",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "desk",
+      "anchorWorld": [
+        128.8797267943509,
+        34.60446446135591,
+        323
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        746.3223580692809,
+        703.2835808305301
+      ],
+      "cropOffsetPx": [
+        344,
+        366
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 15,
+      "sourceId": "104-4",
+      "id": "study_v5_104-4",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "desk",
+      "anchorWorld": [
+        106.14498408190227,
+        189.95229637899413,
+        337
+      ],
+      "yaw3D": -90,
+      "imageAnchorPx": [
+        587.0404610768594,
+        747.2537256541949
+      ],
+      "cropOffsetPx": [
+        302,
+        253
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 16,
+      "sourceId": "104-3",
+      "id": "study_v5_104-3",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "desk",
+      "anchorWorld": [
+        94.28982440815922,
+        304.2498986986439,
+        333
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        474.20600053022815,
+        797.4491592217105
+      ],
+      "cropOffsetPx": [
+        326,
+        407
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 17,
+      "sourceId": "104-5",
+      "id": "study_v5_104-5",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "shelf",
+      "anchorWorld": [
+        35.976369004308026,
+        474.64523999134485,
+        565
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        269.64263394396016,
+        593.430435718082
+      ],
+      "cropOffsetPx": [
+        320,
+        421
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 18,
+      "sourceId": "104-6",
+      "id": "study_v5_104-6",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "window",
+      "anchorWorld": [
+        160,
+        22.6,
+        378
+      ],
+      "yaw3D": -2,
+      "imageAnchorPx": [
+        784.8942960433884,
+        651.5829490643869
+      ],
+      "cropOffsetPx": [
+        300,
+        322
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 19,
+      "sourceId": "102-2",
+      "id": "study_v5_102-2",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "desk",
+      "anchorWorld": [
+        63.953854846398315,
+        83.3257573732878,
+        323
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        644.67324363855,
+        696.036672776268
+      ],
+      "cropOffsetPx": [
+        332,
+        396
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 20,
+      "sourceId": "100-2",
+      "id": "study_v5_100-2",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "desk",
+      "anchorWorld": [
+        34.92446696522235,
+        350.29296676888754,
+        323
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        379.92583859075023,
+        802.4457014411607
+      ],
+      "cropOffsetPx": [
+        346,
+        306
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 21,
+      "sourceId": "101-2",
+      "id": "study_v5_101-2",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "desk",
+      "anchorWorld": [
+        119.32262470194289,
+        296.35419770803816,
+        333
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        503.65814743786166,
+        805.1131030175245
+      ],
+      "cropOffsetPx": [
+        253,
+        332
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 22,
+      "sourceId": "101-1",
+      "id": "study_v5_101-1",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "desk",
+      "anchorWorld": [
+        187.7289873565168,
+        406.26468078747223,
+        343
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        466.5357335913318,
+        873.9043695863381
+      ],
+      "cropOffsetPx": [
+        214,
+        226
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 23,
+      "sourceId": "101-4",
+      "id": "study_v5_101-4",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "desk",
+      "anchorWorld": [
+        126.49094399903373,
+        409.7969866108158,
+        354
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        408.6033721134413,
+        836.0476829576052
+      ],
+      "cropOffsetPx": [
+        261,
+        317
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 24,
+      "sourceId": "101-5",
+      "id": "study_v5_101-5",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "desk",
+      "anchorWorld": [
+        198.40114589906858,
+        442.99259639726034,
+        374
+      ],
+      "yaw3D": 90,
+      "imageAnchorPx": [
+        443.23075598830735,
+        861.1435286096503
+      ],
+      "cropOffsetPx": [
+        60,
+        196
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    },
+    {
+      "sourceIndex": 25,
+      "sourceId": "101-3",
+      "id": "study_v5_101-3",
+      "cameraId": "study_ortho_45_30_v1",
+      "support": "desk",
+      "anchorWorld": [
+        197.5915325575849,
+        458.7007889738053,
+        392
+      ],
+      "yaw3D": 0,
+      "imageAnchorPx": [
+        428.45678123956327,
+        848.0883637270172
+      ],
+      "cropOffsetPx": [
+        255,
+        257
+      ],
+      "pixelsPerUnit": 300,
+      "shadow": null
+    }
+  ],
+  "export": "Lossless alpha crop only; original scale, projection, anchors and draw order retained",
+  "sourceOcclusionPairs": [
+    {
+      "back": 0,
+      "front": 1,
+      "backId": "103-2",
+      "frontId": "103-1",
+      "overlapPixels": 35091
+    },
+    {
+      "back": 0,
+      "front": 2,
+      "backId": "103-2",
+      "frontId": "103-3",
+      "overlapPixels": 11518
+    },
+    {
+      "back": 0,
+      "front": 10,
+      "backId": "103-2",
+      "frontId": "102-6",
+      "overlapPixels": 4207
+    },
+    {
+      "back": 0,
+      "front": 11,
+      "backId": "103-2",
+      "frontId": "100-1",
+      "overlapPixels": 4227
+    },
+    {
+      "back": 1,
+      "front": 2,
+      "backId": "103-1",
+      "frontId": "103-3",
+      "overlapPixels": 10200
+    },
+    {
+      "back": 1,
+      "front": 10,
+      "backId": "103-1",
+      "frontId": "102-6",
+      "overlapPixels": 5764
+    },
+    {
+      "back": 1,
+      "front": 11,
+      "backId": "103-1",
+      "frontId": "100-1",
+      "overlapPixels": 4825
+    },
+    {
+      "back": 2,
+      "front": 10,
+      "backId": "103-3",
+      "frontId": "102-6",
+      "overlapPixels": 7474
+    },
+    {
+      "back": 2,
+      "front": 11,
+      "backId": "103-3",
+      "frontId": "100-1",
+      "overlapPixels": 9375
+    },
+    {
+      "back": 3,
+      "front": 8,
+      "backId": "103-6",
+      "frontId": "102-1",
+      "overlapPixels": 259
+    },
+    {
+      "back": 3,
+      "front": 16,
+      "backId": "103-6",
+      "frontId": "104-3",
+      "overlapPixels": 4697
+    },
+    {
+      "back": 3,
+      "front": 21,
+      "backId": "103-6",
+      "frontId": "101-2",
+      "overlapPixels": 15842
+    },
+    {
+      "back": 3,
+      "front": 22,
+      "backId": "103-6",
+      "frontId": "101-1",
+      "overlapPixels": 7268
+    },
+    {
+      "back": 3,
+      "front": 23,
+      "backId": "103-6",
+      "frontId": "101-4",
+      "overlapPixels": 12552
+    },
+    {
+      "back": 3,
+      "front": 24,
+      "backId": "103-6",
+      "frontId": "101-5",
+      "overlapPixels": 20698
+    },
+    {
+      "back": 3,
+      "front": 25,
+      "backId": "103-6",
+      "frontId": "101-3",
+      "overlapPixels": 12365
+    },
+    {
+      "back": 5,
+      "front": 7,
+      "backId": "100-5",
+      "frontId": "100-5",
+      "overlapPixels": 3428
+    },
+    {
+      "back": 6,
+      "front": 15,
+      "backId": "100-6",
+      "frontId": "104-4",
+      "overlapPixels": 648
+    },
+    {
+      "back": 8,
+      "front": 9,
+      "backId": "102-1",
+      "frontId": "102-5",
+      "overlapPixels": 5788
+    },
+    {
+      "back": 8,
+      "front": 12,
+      "backId": "102-1",
+      "frontId": "102-4",
+      "overlapPixels": 3394
+    },
+    {
+      "back": 8,
+      "front": 15,
+      "backId": "102-1",
+      "frontId": "104-4",
+      "overlapPixels": 5646
+    },
+    {
+      "back": 8,
+      "front": 19,
+      "backId": "102-1",
+      "frontId": "102-2",
+      "overlapPixels": 3723
+    },
+    {
+      "back": 10,
+      "front": 11,
+      "backId": "102-6",
+      "frontId": "100-1",
+      "overlapPixels": 6142
+    },
+    {
+      "back": 16,
+      "front": 21,
+      "backId": "104-3",
+      "frontId": "101-2",
+      "overlapPixels": 3117
+    },
+    {
+      "back": 16,
+      "front": 24,
+      "backId": "104-3",
+      "frontId": "101-5",
+      "overlapPixels": 1220
+    },
+    {
+      "back": 21,
+      "front": 22,
+      "backId": "101-2",
+      "frontId": "101-1",
+      "overlapPixels": 2759
+    },
+    {
+      "back": 21,
+      "front": 23,
+      "backId": "101-2",
+      "frontId": "101-4",
+      "overlapPixels": 3355
+    },
+    {
+      "back": 21,
+      "front": 24,
+      "backId": "101-2",
+      "frontId": "101-5",
+      "overlapPixels": 11124
+    },
+    {
+      "back": 21,
+      "front": 25,
+      "backId": "101-2",
+      "frontId": "101-3",
+      "overlapPixels": 4126
+    },
+    {
+      "back": 22,
+      "front": 23,
+      "backId": "101-1",
+      "frontId": "101-4",
+      "overlapPixels": 3452
+    },
+    {
+      "back": 22,
+      "front": 24,
+      "backId": "101-1",
+      "frontId": "101-5",
+      "overlapPixels": 15661
+    },
+    {
+      "back": 22,
+      "front": 25,
+      "backId": "101-1",
+      "frontId": "101-3",
+      "overlapPixels": 8500
+    },
+    {
+      "back": 23,
+      "front": 24,
+      "backId": "101-4",
+      "frontId": "101-5",
+      "overlapPixels": 10495
+    },
+    {
+      "back": 23,
+      "front": 25,
+      "backId": "101-4",
+      "frontId": "101-3",
+      "overlapPixels": 9057
+    },
+    {
+      "back": 24,
+      "front": 25,
+      "backId": "101-5",
+      "frontId": "101-3",
+      "overlapPixels": 15599
+    }
+  ],
+  "sourceValidation": {
+    "status": "complete",
+    "model": "gpt-image-2.5-sunburst",
+    "newlyGeneratedAssets": 22,
+    "reusedApprovedAssets": 4,
+    "productionSprites": 26,
+    "uniqueTypes": 25,
+    "approvedSpritesByteIdentical": true,
+    "approvedBackgroundByteIdentical": true,
+    "spriteFormat": "26 RGBA PNG, each 1024x1024; alpha min0 and max>=250",
+    "all26VisibleInComposite": true,
+    "sourcePainterOrderRetained": true,
+    "referenceOrderingRelationsPreserved": 35,
+    "directOverlaps": 34,
+    "indirectOrderingRelations": 1,
+    "selectedLongEdgesMeasured": 24,
+    "maxEstimatedErrorDegrees": 1.0,
+    "camera": "study_ortho_45_30_v1",
+    "nativeDimensionsMeasuredPerFile": true,
+    "registration": "uniform scale and translation; no image-space pose rotation, anisotropic scale, or perspective warp",
+    "nativeAlphaPreserved": true,
+    "visibleArtClippingDetected": false,
+    "rulerOpenings": [
+      {
+        "assetId": "104-3",
+        "enclosedAlphaBelow20Pixels": 367,
+        "enclosedTrueZeroAlphaPixels": 278,
+        "status": "transparent opening verified"
+      },
+      {
+        "assetId": "104-4",
+        "enclosedAlphaBelow20Pixels": 5712,
+        "enclosedTrueZeroAlphaPixels": 5235,
+        "status": "transparent opening verified"
+      }
+    ],
+    "noIndependentObjectShadows": true,
+    "manualReview": {
+      "reviewed": [
+        "previews/scene_preview.png",
+        "previews/items_overview.png",
+        "previews/game_scale_400.png",
+        "previews/chair_detail.png",
+        "previews/desk_detail.png",
+        "previews/rulers_thickness_comparison.png"
+      ],
+      "findings": "Shared colored-outline illustration finish; visible side thickness; book stack, electronics, window holder and chair drape checked at final size. Seaweed A pose and both rulers were revised; compass shifted along shelf to clear cup footprint. Both rulers revised to thin-sheet edges; transparent openings and same-scale before/after views reviewed. Other 24 sprites, room and all placements remain unchanged.",
+      "scope": "Selected edge measurements plus support geometry and visual review; not a mathematical certificate for every generated pixel."
+    },
+    "selectedGenerationRecordsAndInputHashesVerified": true,
+    "credentialScan": {
+      "checked": true,
+      "credentialFilesFound": 0
+    },
+    "delivery": {
+      "index": "index.html",
+      "scene": "previews/scene_preview.png",
+      "overview": "previews/items_overview.png",
+      "archive": "../study_illustrated_v5_full.zip"
+    },
+    "unitySceneModified": false,
+    "rulerThicknessRevision": {
+      "status": "checked",
+      "assetIds": [
+        "104-3",
+        "104-4"
+      ],
+      "model": "gpt-image-2.5-sunburst",
+      "geometryThicknessRatio": 0.3,
+      "geometryOperation": "Scale local Z height about the existing base contact plane only; XY footprint, yaw, camera, guide origin, PPU, world placement and painter order preserved.",
+      "other24SpritesByteIdentical": true,
+      "backgroundByteIdentical": true,
+      "allInstancesUnchanged": true,
+      "beforeAssets": "source/ruler_thickness_before/",
+      "comparison": "previews/rulers_thickness_comparison.png",
+      "after": "previews/rulers_thin_preview.png",
+      "requests": [
+        "qa/request_104-3_attempt3.json",
+        "qa/request_104-4_attempt9.json"
+      ]
+    }
+  }
+}
