@@ -155,14 +155,19 @@ button:disabled { cursor: default; opacity: .65; }
 #loading {
   position: absolute; inset: 0; z-index: 10;
   background-color: #f4d2a0;
-  background-image: url("./ui-assets/Loading_BGR-61.png");
-  background-position: center; background-size: cover;
-  display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding-bottom: 12%;
+  background-image: url("./ui-assets/loading/launch-tidy-room-v1.png");
+  background-position: center 35%; background-size: cover;
+  display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 8px;
+  padding: 0 20px max(16px, env(safe-area-inset-bottom, 0px));
 }
 #loading[hidden] { display: none; }
-#loading-logo { position: absolute; width: 64%; top: 12%; }
+#game:has(> #loading:not([hidden])) { max-width: none; }
 progress { width: 65%; height: 17px; accent-color: #fab736; }
-#loading-text { font-size: 14px; padding: 5px 12px; border-radius: 12px; background: #fff6dfc9; }
+#loading-text { margin: 0; font-size: 14px; padding: 5px 12px; border-radius: 12px; background: #fff6dfc9; }
+@media (max-height: 600px) {
+  #loading { gap: 5px; padding-bottom: max(10px, env(safe-area-inset-bottom, 0px)); }
+  #loading-text { font-size: 12px; padding: 4px 10px; }
+}
 @media (prefers-reduced-motion: no-preference) {
   .room-ui-entering > :is(.hud, #orders, #queue-row) {
     --room-ui-offset: calc(-1 * (var(--hud-inset) + 590 * var(--u)));

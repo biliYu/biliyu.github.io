@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#f4d8b4">
   <title>Tidy Room</title>
-  <link rel="preload" as="image" href="./happy/ui-assets/Loading_BGR-61.png">
+  <link rel="preload" as="image" href="./happy/ui-assets/loading/launch-tidy-room-v1.png">
   <link rel="stylesheet" href="./happy/app.css">
   <link rel="stylesheet" href="./happy/main-menu.css">
   <link rel="stylesheet" href="./happy/popup-reference.css">
@@ -14,7 +14,7 @@
 </head>
 <body>
 <main id="game">
-  <div id="loading"><img id="loading-logo" src="./happy/ui-assets/Loading_Logo-65.png" alt="Happy Tidy Room"><progress aria-label="Loading room"></progress><p id="loading-text">Loading…</p></div>
+  <div id="loading" role="region" aria-label="Tidy Room"><progress aria-label="Loading room"></progress><p id="loading-text">Loading…</p></div>
   <canvas id="board" aria-label="Room. Tap an uncovered item to collect it."></canvas>
   <canvas id="effects" aria-hidden="true"></canvas>
   <header class="hud">
