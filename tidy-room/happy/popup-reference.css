@@ -139,3 +139,179 @@
 #popup.reference-popup[data-variant="lives"]:has(.revive-status:not(:empty)) #popup-actions { top: calc(241 * var(--p)); }
 #popup.reference-popup:lang(en) .outcome-copy { width: calc(310 * var(--p)); }
 #popup.reference-popup:lang(en) .revive-description { font-size: calc(17 * var(--p)); }
+
+#popup.reference-popup[data-variant="settings"] {
+  --reference-height: calc(134 + var(--settings-card-height, 146) + var(--settings-action-count, 3) * 80);
+  --reference-width: 406;
+}
+#popup.reference-popup[data-variant="settings"] .popup-panel {
+  height: calc(var(--reference-height) * var(--p));
+  padding: 0;
+  box-shadow: none;
+}
+#popup.reference-popup[data-variant="settings"] h2 {
+  position: absolute;
+  top: calc(22 * var(--p));
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: calc(146 * var(--p));
+  height: calc(54 * var(--p));
+  margin: 0;
+  padding: 0;
+  transform: translateX(-50%);
+  border: calc(2 * var(--p)) solid #93683f;
+  border-radius: calc(16 * var(--p));
+  background: linear-gradient(#fff4dd, #f2d7aa);
+  box-shadow: 0 calc(3 * var(--p)) #d6b789, inset 0 calc(2 * var(--p)) #fff9eb;
+  color: #76502d;
+  font-size: calc(30 * var(--p));
+  line-height: 1;
+  font-weight: 800;
+  -webkit-text-stroke: 0;
+}
+#popup.reference-popup[data-variant="settings"] #popup-close {
+  top: calc(4 * var(--p));
+  right: calc(4 * var(--p));
+}
+#popup.reference-popup[data-variant="settings"] #popup-close > .reference-art {
+  clip-path: ellipse(49% 46% at 50% 49%);
+}
+#popup.reference-popup[data-variant="settings"] #popup-content {
+  position: absolute;
+  top: calc(100 * var(--p));
+  left: calc(28 * var(--p));
+  right: calc(28 * var(--p));
+  height: calc(var(--settings-card-height, 146) * var(--p));
+  padding: 0 calc(18 * var(--p));
+  border: calc(1.5 * var(--p)) solid #c7a778;
+  border-radius: calc(20 * var(--p));
+  background: linear-gradient(#f7e9cf, #f2ddba);
+  box-shadow: inset 0 calc(2 * var(--p)) calc(4 * var(--p)) #a1784720,
+    inset 0 calc(-2 * var(--p)) #fff6e3;
+}
+#popup.reference-popup[data-variant="settings"] .setting-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr calc(82 * var(--p));
+  align-items: center;
+  gap: calc(13 * var(--p));
+  height: calc(72 * var(--p));
+  margin: 0;
+}
+#popup.reference-popup[data-variant="settings"] .setting-row + .setting-row {
+  border-top: calc(1 * var(--p)) solid #d8bc91;
+}
+.settings-icon {
+  display: block;
+  width: calc(38 * var(--p));
+  height: calc(38 * var(--p));
+  object-fit: contain;
+}
+.settings-caption {
+  color: #76502d;
+  font-size: calc(24 * var(--p));
+  font-weight: 700;
+  text-align: left;
+  line-height: 1;
+}
+#popup.reference-popup[data-variant="settings"] .setting-row input[type="checkbox"] {
+  position: absolute;
+  right: 0;
+  width: calc(82 * var(--p));
+  height: calc(42 * var(--p));
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.settings-switch {
+  position: relative;
+  display: block;
+  width: calc(82 * var(--p));
+  height: calc(42 * var(--p));
+  border: calc(2 * var(--p)) solid #94724c;
+  border-radius: calc(23 * var(--p));
+  background: #d8c6a9;
+  box-shadow: inset 0 calc(2 * var(--p)) calc(3 * var(--p)) #79614028;
+}
+.settings-switch::before {
+  content: "";
+  position: absolute;
+  top: calc(2 * var(--p));
+  left: calc(3 * var(--p));
+  width: calc(34 * var(--p));
+  height: calc(34 * var(--p));
+  border: calc(1.5 * var(--p)) solid #b38950;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 34% 24%, #fff7de 0 10%, transparent 28%), linear-gradient(#fff0c7, #edcb8f);
+  box-shadow: 0 calc(2 * var(--p)) #92764b50;
+}
+.setting-row input:checked + .settings-switch {
+  background: linear-gradient(#b9cf99, #94b47a);
+  border-color: #71875a;
+}
+.setting-row input:checked + .settings-switch::before { transform: translateX(calc(38 * var(--p))); }
+.setting-row input:checked + .settings-switch::after {
+  content: "";
+  position: absolute;
+  left: calc(14 * var(--p));
+  top: calc(12 * var(--p));
+  width: calc(12 * var(--p));
+  height: calc(7 * var(--p));
+  border-left: calc(3 * var(--p)) solid #f9f6df;
+  border-bottom: calc(3 * var(--p)) solid #f9f6df;
+  transform: rotate(-45deg);
+}
+#popup.reference-popup[data-variant="settings"] #popup-actions {
+  position: absolute;
+  top: calc((118 + var(--settings-card-height, 146)) * var(--p));
+  left: 50%;
+  width: calc(252 * var(--p));
+  grid-template-columns: 1fr;
+  margin: 0;
+  gap: calc(12 * var(--p));
+  transform: translateX(-50%);
+}
+#popup.reference-popup[data-variant="settings"] #popup-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(12 * var(--p));
+  width: 100%;
+  height: calc(68 * var(--p));
+  min-height: 0;
+  padding: 0 0 calc(5 * var(--p));
+  font-size: calc(27 * var(--p));
+  line-height: 1;
+  font-weight: 800;
+  box-shadow: none;
+  -webkit-text-stroke-width: calc(2 * var(--p));
+}
+.settings-action-icon {
+  width: calc(26 * var(--p));
+  height: calc(26 * var(--p));
+  overflow: visible;
+  flex: none;
+}
+.settings-action-icon path {
+  fill: #fff9eb;
+  stroke: #4b6744;
+  stroke-width: 1.8;
+  stroke-linejoin: round;
+  paint-order: stroke fill;
+}
+.reference-blue .settings-action-icon path { stroke: #386b83; }
+
+#popup.reference-popup[data-variant="settings"] .settings-option {
+  grid-template-columns: calc(38 * var(--p)) 1fr calc(82 * var(--p));
+}
+#popup.reference-popup[data-variant="settings"] .settings-debug-row .settings-caption { font-size: calc(20 * var(--p)); }
+#popup.reference-popup[data-variant="settings"] .settings-debug-row:has(input[type="number"]) { grid-template-columns: 1fr calc(110 * var(--p)); }
+#popup.reference-popup[data-variant="settings"] input[type="number"] {
+  width: calc(110 * var(--p)); height: calc(38 * var(--p)); padding: calc(4 * var(--p)); font-size: calc(20 * var(--p));
+}
+.settings-switch, .settings-switch::before { transition: background 120ms, transform 120ms; }
+.setting-row input:focus-visible + .settings-switch { outline: 2px solid #775438; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .settings-switch, .settings-switch::before { transition: none; }
+}

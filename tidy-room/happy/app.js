@@ -25,11 +25,21 @@ window.addEventListener("keydown", event => { if (event.key === "Tab") { popup.c
 window.addEventListener("pointerdown", () => { popup.classList.remove("keyboard-navigation"); mainMenu.classList.remove("keyboard-navigation"); }, { passive: true });
 const reviveBalance = popup.querySelector(".revive-balance");
 const loading = document.querySelector("#loading");
+const loadingProgress = document.querySelector("#loading-progress");
+const loadingPercentage = document.querySelector("#loading-percentage");
+const loadingCaption = document.querySelector("#loading-text");
 const toastNode = document.querySelector("#toast");
 const options = new URLSearchParams(location.search);
 const languageTag = (options.get("lang") || document.documentElement.lang || navigator.language || "en").replaceAll("_", "-").toLowerCase();
 const storageLanguage = languageTag === "zh" || languageTag.startsWith("zh-") ?
   languageTag.includes("hant") || /^zh-(tw|hk|mo)(-|$)/.test(languageTag) ? "zh-Hant" : "zh-Hans" : "en";
+const loadingCopy = {
+  en: { loading: "Loading…", preparing: "Preparing room…" },
+  "zh-Hans": { loading: "正在加载…", preparing: "正在准备房间…" },
+  "zh-Hant": { loading: "正在載入…", preparing: "正在準備房間…" }
+}[storageLanguage];
+loadingCaption.textContent = loadingCopy.loading;
+loadingProgress.setAttribute("aria-label", loadingCopy.loading);
 const storageMessages = {
   en: { label: "Storage", description: "Temporary storage", title: "Storage", confirm: "OK", empty: "Storage is empty" },
   "zh-Hans": { label: "暂存", description: "临时仓库", title: "暂存物品", confirm: "确定", empty: "暂存箱里还没有物件" },
@@ -68,7 +78,7 @@ const victoryText = {
 }[storageLanguage];
 const flowText = {
   en: {
-    close: "Close", settings: "Settings", sound: "Sound", haptic: "Haptic", continue: "Continue", retry: "Restart level",
+    close: "Close", settings: "Settings", sound: "Sound", haptic: "Haptic", continue: "Continue", continueGame: "Continue game", retry: "Restart level",
     failure: "Room unfinished", level: number => "Level " + number,
     giveUpTitle: "Give up this room?", giveUp: "Give up", restartTitle: "Restart this room?", loseHeart: "You’ll use 1 life.",
     backToRevive: "Back to revive", shop: "Coin shop", shortfall: value => value + " more coins needed",
@@ -77,7 +87,7 @@ const flowText = {
     watchForLife: "Watch for 1 life", refill: "Refill lives"
   },
   "zh-Hans": {
-    close: "关闭", settings: "设置", sound: "音效", haptic: "振动", continue: "继续", retry: "重新开始",
+    close: "关闭", settings: "设置", sound: "音效", haptic: "振动", continue: "继续", continueGame: "继续游戏", retry: "重新开始",
     failure: "关卡失败", level: number => "第 " + number + " 关",
     giveUpTitle: "放弃本局？", giveUp: "放弃本局", restartTitle: "重新开始？", loseHeart: "本局会消耗 1 点体力。",
     backToRevive: "返回复活", shop: "金币商店", shortfall: value => "还差 " + value + " 金币",
@@ -86,7 +96,7 @@ const flowText = {
     watchForLife: "看视频 +1 体力", refill: "补满体力"
   },
   "zh-Hant": {
-    close: "關閉", settings: "設定", sound: "音效", haptic: "震動", continue: "繼續", retry: "重新開始",
+    close: "關閉", settings: "設定", sound: "音效", haptic: "震動", continue: "繼續", continueGame: "繼續遊戲", retry: "重新開始",
     failure: "關卡失敗", level: number => "第 " + number + " 關",
     giveUpTitle: "放棄本局？", giveUp: "放棄本局", restartTitle: "重新開始？", loseHeart: "本局會消耗 1 點體力。",
     backToRevive: "返回復活", shop: "金幣商店", shortfall: value => "還差 " + value + " 金幣",
@@ -662,37 +672,55 @@ function settings() {
   const body = document.createElement("div");
   for (const key of ["sound", "haptic"]) {
     const row = document.createElement("label");
-    row.className = "setting-row";
+    row.className = "setting-row settings-option";
+    const icon = picture(url("ui-assets/" + (key === "sound" ? "GP_Icon_Sound-4322.png" : "GP_Icon_Haptic-5226.png")));
+    icon.className = "settings-icon";
     const caption = document.createElement("span");
+    caption.className = "settings-caption";
     caption.textContent = flowText[key];
     const toggle = document.createElement("input");
     toggle.type = "checkbox";
+    toggle.name = key;
+    toggle.setAttribute("role", "switch");
     toggle.checked = player[key];
     toggle.addEventListener("change", () => { player[key] = toggle.checked; persist(); });
-    row.append(caption, toggle);
+    const track = document.createElement("span");
+    track.className = "settings-switch";
+    track.setAttribute("aria-hidden", "true");
+    row.append(icon, caption, toggle, track);
     body.append(row);
   }
-  const actions = [[mainMenu.hidden ? flowText.continue : flowText.close, closePopup]];
+  const actions = [[mainMenu.hidden ? flowText.continueGame : flowText.close, closePopup]];
   if (mainMenu.hidden) {
     actions.push([flowText.retry, () => {
       if (catalog.config.heartsEnabled && player.heartSpent) confirmLifeLoss(false, () => restartCurrentRoom(settings), closePopup);
       else restartCurrentRoom(settings);
     }]);
-    if (!development) actions.push([menuText.home, showMainMenu]);
+    if (!development) actions.push([menuText.back, showMainMenu]);
   }
   if (mainMenu.hidden && development && !editorPreview) {
     const row = document.createElement("label");
-    row.className = "setting-row";
-    row.append("Level");
+    row.className = "setting-row settings-debug-row";
+    const caption = document.createElement("span");
+    caption.className = "settings-caption";
+    caption.textContent = "Level";
+    row.append(caption);
     const number = document.createElement("input");
     number.type = "number"; number.min = "1"; number.max = "9999"; number.value = player.level;
     row.append(number); body.append(row);
     const alternate = document.createElement("label");
-    alternate.className = "setting-row";
-    alternate.append("A layouts");
+    alternate.className = "setting-row settings-debug-row";
+    const alternateCaption = document.createElement("span");
+    alternateCaption.className = "settings-caption";
+    alternateCaption.textContent = "A layouts";
     const toggle = document.createElement("input");
     toggle.type = "checkbox"; toggle.checked = player.variant === 1;
-    alternate.append(toggle); body.append(alternate);
+    toggle.name = "variant";
+    toggle.setAttribute("role", "switch");
+    const track = document.createElement("span");
+    track.className = "settings-switch";
+    track.setAttribute("aria-hidden", "true");
+    alternate.append(alternateCaption, toggle, track); body.append(alternate);
     actions.push(["Load level", () => {
       player.variant = toggle.checked ? 1 : 0;
       player.heartSpent = false;
@@ -700,7 +728,33 @@ function settings() {
       start(Math.max(1, Math.trunc(Number(number.value)) || 1));
     }]);
   }
+  popup.style.setProperty("--settings-card-height", body.childElementCount * 72 + 2);
+  popup.style.setProperty("--settings-action-count", actions.length);
   showPopup(flowText.settings, body, actions, closePopup, "settings");
+  const icons = mainMenu.hidden ? [
+    "M8 3 L25 15 L8 27 Z",
+    "M25 9 A11 11 0 1 0 25 21 L21 19 A7 7 0 1 1 21 10 L17 13 L28 14 L28 3 Z",
+    development ? "M6 3 H24 V13 H29 L15 27 L1 13 H6 V3 Z" : "M2 14 L15 3 L28 14 L25 17 L25 27 H18 V19 H12 V27 H5 V17 Z"
+  ] : ["M6 3 L15 12 L24 3 L27 6 L18 15 L27 24 L24 27 L15 18 L6 27 L3 24 L12 15 L3 6 Z"];
+  Array.from(popupActions.children).forEach((button, index) => {
+    const caption = document.createElement("span");
+    caption.textContent = actions[index][0];
+    for (const child of Array.from(button.childNodes)) if (child.nodeType === Node.TEXT_NODE) child.remove();
+    const icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    icon.classList.add("settings-action-icon");
+    icon.setAttribute("viewBox", "0 0 30 30");
+    icon.setAttribute("aria-hidden", "true");
+    icon.innerHTML = '<path d="' + icons[index] + '"/>';
+    button.append(icon, caption);
+  });
+}
+
+function updateLoadingProgress(value, message) {
+  if (loading.hidden) return;
+  const percent = Math.max(0, Math.min(100, Math.round(value)));
+  loadingProgress.value = percent;
+  loadingPercentage.textContent = percent + "%";
+  if (message) loadingCaption.textContent = message;
 }
 
 function resize() {
@@ -917,8 +971,7 @@ async function start(displayLevel, restore = null, { enterGame = false } = {}) {
   storagePreview.close(true);
   if (popup.open) closePopup();
   camera.cancel();
-  const loadingText = document.querySelector("#loading-text");
-  if (!loading.hidden) loadingText.textContent = "Loading…";
+  updateLoadingProgress(55, loadingCopy.loading);
   const content = displayLevel <= 60 ? displayLevel : 7 + (displayLevel - 61) % 54;
   const alternate = player.variant === 1 && [3, 4, 5, 8, 11].includes(content) ? "_A" : "";
   try {
@@ -932,8 +985,10 @@ async function start(displayLevel, restore = null, { enterGame = false } = {}) {
       if (!response.ok) throw new Error("Level could not be loaded");
       nextLevel = await response.json();
     }
+    updateLoadingProgress(60);
     const names = new Set([nextLevel.bg, ...nextLevel.content.flatMap(item => [item.id, item.boardId, item.shadow?.id].filter(Boolean))]);
     const nextImages = new Map();
+    let loadedImages = 0;
     await Promise.all(Array.from(names, async name => {
       const image = new Image();
       await new Promise((resolve, reject) => {
@@ -948,10 +1003,11 @@ async function start(displayLevel, restore = null, { enterGame = false } = {}) {
           sourceRect.height - image.height - Math.round(sourceRect.textureRectOffset.y));
         nextImages.set(name, fullImage);
       } else nextImages.set(name, image);
+      if (generation === loadingGeneration) updateLoadingProgress(60 + 35 * ++loadedImages / names.size);
     }));
     if (generation !== loadingGeneration) return;
     const nextGeometry = makeGeometry(nextLevel, catalog.assets, nextImages);
-    if (!loading.hidden) loadingText.textContent = "Preparing room…";
+    updateLoadingProgress(95, loadingCopy.preparing);
     const blockers = await computeBlockers(nextGeometry);
     if (generation !== loadingGeneration) return;
     const rules = { subgroups: catalog.subgroups, blockers };
@@ -983,6 +1039,7 @@ async function start(displayLevel, restore = null, { enterGame = false } = {}) {
     lastPick = performance.now(); previousFrame = 0;
     updateHud(); resize(); persist();
     if (mainMenu.hidden) playRoomHudIntro();
+    updateLoadingProgress(100);
     loading.hidden = true;
     roomLoading = false;
     refreshHearts();
@@ -990,7 +1047,7 @@ async function start(displayLevel, restore = null, { enterGame = false } = {}) {
     offerBoosterTutorial();
   } catch (error) {
     if (generation !== loadingGeneration) return;
-    if (!loading.hidden) loadingText.textContent = error.message;
+    if (!loading.hidden) loadingCaption.textContent = error.message;
     showPopup("Unable to load", error.message, [["Retry", () => start(displayLevel, restore, { enterGame })]], null);
   }
 }
@@ -1161,10 +1218,13 @@ function frame(timestamp) {
 
 async function initialize() {
   try {
-    const responses = await Promise.all([
-      fetch(url("data/catalog.json")), fetch(url("data/ui.json")), fetch(url("data/order-icons.json")),
-      fetch(url("data/sprite-rects.json")), fetch(url("data/box-animation.json")), fetch(url("data/effects.json"))
-    ]);
+    const resourcePaths = ["data/catalog.json", "data/ui.json", "data/order-icons.json", "data/sprite-rects.json", "data/box-animation.json", "data/effects.json"];
+    let loadedResources = 0;
+    const responses = await Promise.all(resourcePaths.map(async path => {
+      const response = await fetch(url(path));
+      updateLoadingProgress(15 * ++loadedResources / resourcePaths.length);
+      return response;
+    }));
     if (responses.some(response => !response.ok)) throw new Error("Game resources are unavailable");
     catalog = await responses[0].json();
     catalog.icons = await responses[2].json();
@@ -1191,10 +1251,12 @@ async function initialize() {
     const reviveBroomPath = "ui-assets/outlined-v2/revive-broom.png";
     texturePaths.add(reviveBroomPath);
     const textures = new Map();
+    let loadedTextures = 0;
     await Promise.all([...texturePaths].map(async path => {
       const image = new Image();
       await new Promise((resolve, reject) => { image.onload = resolve; image.onerror = reject; image.src = url(path); });
       textures.set(path, image);
+      updateLoadingProgress(15 + 35 * ++loadedTextures / texturePaths.size);
     }));
     textures.set("spark", textures.get(presentationConfig.sprites.spark));
     textures.set("glow", textures.get(presentationConfig.sprites.glow));
@@ -1202,6 +1264,7 @@ async function initialize() {
     textures.set("reviveBroom", reviveBroom);
     presentation = createPresentation(host, effectsCanvas, animationData.clips, presentationConfig, textures, catalog.config, catalog.names, () => audio("box_close"));
     if (document.fonts) await document.fonts.load('40px "HappyTidy"');
+    updateLoadingProgress(53);
     const audioResponse = await fetch(url("data/audio.json"));
     if (audioResponse.ok) {
       extras.audio = await audioResponse.json();
@@ -1211,6 +1274,7 @@ async function initialize() {
       const entry = ui.get(image.dataset.art);
       if (entry) image.src = url(entry.url);
     }
+    updateLoadingProgress(55);
     await start(player.level, saved?.session);
     refreshHearts();
     setInterval(refreshHearts, 1000);
@@ -1233,7 +1297,7 @@ async function initialize() {
       camera
     };
   } catch (error) {
-    document.querySelector("#loading-text").textContent = error.message;
+    loadingCaption.textContent = error.message;
   }
 }
 initialize();

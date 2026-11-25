@@ -14,7 +14,10 @@
 </head>
 <body>
 <main id="game">
-  <div id="loading" role="region" aria-label="Tidy Room"><progress aria-label="Loading room"></progress><p id="loading-text">Loading…</p></div>
+  <div id="loading" role="region" aria-label="Tidy Room">
+    <div class="loading-meter"><progress id="loading-progress" max="100" value="0" aria-label="Loading room"></progress><span id="loading-percentage" aria-hidden="true">0%</span></div>
+    <p id="loading-text" role="status">正在加载…</p>
+  </div>
   <canvas id="board" aria-label="Room. Tap an uncovered item to collect it."></canvas>
   <canvas id="effects" aria-hidden="true"></canvas>
   <header class="hud">
