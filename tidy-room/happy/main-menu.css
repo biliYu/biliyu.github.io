@@ -61,9 +61,11 @@
 #main-menu[data-full="true"][lang="zh-Hans"] #menu-heart-time,
 #main-menu[data-coins="600"] #menu-coins b { color: transparent; }
 .menu-logo {
-  position: absolute; width: 1px; height: 1px; margin: 0; padding: 0;
-  overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+  position: absolute; left: calc(var(--mx) + 200 * var(--mu)); top: calc(var(--my) + 150 * var(--mu));
+  width: calc(370 * var(--mu)); height: calc(180 * var(--mu)); margin: 0; padding: 0;
 }
+.menu-logo > span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.menu-logo > .menu-slice { width: 100%; height: 100%; }
 .menu-play-area { position: absolute; inset: 0; pointer-events: none; }
 #main-menu .menu-play-button {
   position: absolute; left: calc(var(--mx) + 174 * var(--mu)); top: calc(var(--my) + 1060 * var(--mu));

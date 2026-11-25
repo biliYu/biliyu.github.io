@@ -4,7 +4,8 @@ const PICK_HOP_DURATION = 220;
 const STORAGE_GROW_DURATION = 150;
 const BOX_COMPLETE_DELAY = 800;
 const STORAGE_INTERVAL = 120;
-const CURRENT_TIMING_PROFILE = 2;
+const CURRENT_TIMING_PROFILE = 3;
+export const MAX_QUEUE_SLOTS = 7;
 
 function layoutSignature(level, items, blockers, queueCapacity, openBoxes, maxBoxes) {
   const text = JSON.stringify([level, items.map(item => item.subgroup), blockers, queueCapacity, openBoxes, maxBoxes]);
@@ -93,10 +94,15 @@ export function canPick(state, index) {
 }
 
 function flightTiming(from, to, isVacuum, profile) {
+  if (profile >= 3 && from === "board" && !isVacuum) {
+    return to === "box"
+      ? { hopDuration: 140, growDuration: 0, flightDuration: 430 }
+      : { hopDuration: 300, growDuration: 0, flightDuration: 330 };
+  }
   let hopDuration = 0;
   let growDuration = 0;
   let flightDuration = from === "board" || to === "storage" ? PICK_DURATION : TRANSFER_DURATION;
-  if (profile === CURRENT_TIMING_PROFILE && to === "box" && !isVacuum) {
+  if (profile >= 2 && to === "box" && !isVacuum) {
     flightDuration = TRANSFER_DURATION;
     if (from === "board") hopDuration = PICK_HOP_DURATION;
     if (from === "storage") growDuration = STORAGE_GROW_DURATION;
@@ -124,10 +130,10 @@ function launch(state, index, to, boxIndex = null, queueIndex = null, startAt = 
   return flight;
 }
 
-function retime(state) {
-  if (state.timingProfile !== 1) return { ok: false, reason: "already-current" };
+function retime(state, profile) {
+  if (![2, CURRENT_TIMING_PROFILE].includes(profile) || profile <= state.timingProfile) return { ok: false, reason: "invalid-profile" };
   for (const flight of state.flights) {
-    const timing = flightTiming(flight.from, flight.to, flight.isVacuum, CURRENT_TIMING_PROFILE);
+    const timing = flightTiming(flight.from, flight.to, flight.isVacuum, profile);
     const previousDuration = flight.hopDuration + flight.growDuration + flight.flightDuration;
     const duration = timing.hopDuration + timing.growDuration + timing.flightDuration;
     if (duration !== previousDuration) {
@@ -139,8 +145,8 @@ function retime(state) {
     }
     Object.assign(flight, timing);
   }
-  state.timingProfile = CURRENT_TIMING_PROFILE;
-  state.actions.push({ type: "retime", at: state.now, profile: CURRENT_TIMING_PROFILE });
+  state.timingProfile = profile;
+  state.actions.push({ type: "retime", at: state.now, profile });
   return { ok: true };
 }
 
@@ -314,6 +320,15 @@ export function unlockBox(state) {
   return { ok: true, boxIndex: box.index };
 }
 
+export function unlockQueueSlot(state) {
+  const reason = inputReason(state);
+  if (reason) return { ok: false, reason };
+  if (state.queue.length >= MAX_QUEUE_SLOTS) return { ok: false, reason: "no-locked-slot" };
+  state.queue.push(null);
+  state.actions.push({ type: "unlockQueueSlot", at: state.now });
+  return { ok: true };
+}
+
 export function revive(state) {
   if (state.status !== "lost") return { ok: false, reason: "not-lost" };
   if (state.paused || state.inputLocks > 0) return { ok: false, reason: "locked" };
@@ -341,13 +356,14 @@ export function snapshot(state) {
 
 export function restoreSession(level, options, saved) {
   const state = createSession(level, options);
+  const extraSlots = Math.max(0, MAX_QUEUE_SLOTS - state.queue.length);
   if (![1, 2].includes(saved?.version) || saved.layoutSignature !== state.layoutSignature || !Number.isFinite(saved.now) || saved.now < 0 ||
-      !Array.isArray(saved.actions) || saved.actions.length > state.items.length * 3 + state.boxes.length + 1 ||
+      !Array.isArray(saved.actions) || saved.actions.length > state.items.length * 3 + state.boxes.length + extraSlots + 2 ||
       typeof saved.paused !== "boolean" || !Number.isInteger(saved.inputLocks) || saved.inputLocks < 0) return state;
   const initialTimingProfile = saved.version === 1 ? 1 : saved.initialTimingProfile;
-  if (![1, CURRENT_TIMING_PROFILE].includes(initialTimingProfile)) return state;
+  if (![1, 2, CURRENT_TIMING_PROFILE].includes(initialTimingProfile)) return state;
   state.initialTimingProfile = state.timingProfile = initialTimingProfile;
-  const commands = { clear: clearQueue, vacuum, unlock: unlockBox, revive };
+  const commands = { clear: clearQueue, vacuum, unlock: unlockBox, unlockQueueSlot, revive };
   for (const action of saved.actions) {
     if (!action || !Number.isFinite(action.at) || action.at < state.now || action.at > saved.now) return createSession(level, options);
     advance(state, action.at - state.now);
@@ -355,14 +371,14 @@ export function restoreSession(level, options, saved) {
     let result;
     if (action.type === "pick" && Number.isInteger(action.index)) result = pick(state, action.index);
     else if (action.type === "prefill") result = prefillTutorial(state, action.count);
-    else if (action.type === "retime" && saved.version === 2 && action.profile === CURRENT_TIMING_PROFILE) result = retime(state);
+    else if (action.type === "retime" && saved.version === 2) result = retime(state, action.profile);
     else if (Object.prototype.hasOwnProperty.call(commands, action.type)) result = commands[action.type](state);
     if (!result?.ok) return createSession(level, options);
   }
   advance(state, saved.now - state.now);
   if (state.now !== saved.now) return createSession(level, options);
   // Reconstruct old commands at their original times before changing any in-flight durations.
-  if (state.timingProfile === 1) retime(state);
+  if (state.timingProfile < CURRENT_TIMING_PROFILE) retime(state, CURRENT_TIMING_PROFILE);
   state.paused = saved.paused;
   state.inputLocks = saved.inputLocks;
   return state;

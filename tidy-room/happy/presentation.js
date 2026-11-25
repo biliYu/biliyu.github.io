@@ -49,6 +49,28 @@ export function boxFlightPose(from, mouth, progress, targetSize) {
   };
 }
 
+export function pickupFlightPose(from, target, progress, targetSize, intoBox = false) {
+  // Hold the basket item at full landing size while it passes behind the rim.
+  const travel = intoBox ? Math.min(1, progress / .94) : progress;
+  const crestAt = intoBox ? .68 : .72;
+  const rise = Math.min(1, travel / crestAt);
+  const fall = smoothStep((travel - crestAt) / (1 - crestAt));
+  const across = smoothStep(travel);
+  const lift = (rise * (2 - rise)) ** (intoBox ? 1 : 1.7);
+  const size = intoBox ? Math.min(targetSize, target.width * .64) : targetSize;
+  const crest = Math.min(from.y, target.y - (intoBox ? size * .58 : target.width * .21));
+  const landing = target.y + (intoBox ? size * .6 : 0);
+  return {
+    x: from.x + (target.x - from.x) * across,
+    y: from.y + (crest - from.y) * lift + (landing - crest) * fall,
+    size: from.size + (size - from.size) * (intoBox ? lift : across),
+    behindRim: intoBox && travel >= crestAt,
+    inside: intoBox && travel === 1
+  };
+}
+
+const TRAIL_COLORS = ["#82defb", "#fa9cce", "#ffe392", "#c9a7ff", "#a3f4ad"];
+const VICTORY_COLORS = ["#ff6d92", "#ffc04f", "#48ceb1", "#68caff", "#ac88fa", "#fff2a3"];
 const SWEEP_CONTACT = .24;
 const SWEEP_END = .77;
 
@@ -115,15 +137,22 @@ export function paintSweepingBroom(context, image, from, mouth, progress, size) 
   context.restore();
 }
 
-export function createPresentation(host, canvas, clips, fxConfig, textures, config, onBoxClose) {
+export function createPresentation(host, canvas, clips, fxConfig, textures, config, categoryNames, onBoxClose) {
   const context = canvas.getContext("2d");
   const motions = new Map();
   const boxes = [];
   const completedBursts = new Set();
   let particles = [];
+  let victoryStarted = false;
   let width = 1, height = 1, dpr = 1, hudScale = 1, paintedEffects = false;
-  const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const motionPreference = matchMedia("(prefers-reduced-motion: reduce)");
+  const reducedMotion = motionPreference.matches;
   const storage = host.querySelector("#storage");
+  const queueRow = host.querySelector("#queue-row");
+  const tray = host.querySelector("#queue");
+  const slots = tray.children;
+  const queueCategory = host.querySelector("#queue-category");
+  let queueLanding = null;
   const tracks = {};
   for (const [name, clip] of Object.entries(clips)) {
     tracks[name] = new Map(clip.channels.map(track => [track.path + "/" + track.property, track]));
@@ -188,8 +217,12 @@ export function createPresentation(host, canvas, clips, fxConfig, textures, conf
       motion.size *= motion.flight.from === "board" ? sx : hudRatio;
     }
     for (const particle of particles) {
-      particle.x *= sx; particle.y *= sy;
-      particle.vx *= sx; particle.vy *= sy; particle.size *= hudRatio;
+      if (particle.victorySide) continue;
+      if (!particle.worldOrigin) {
+        particle.x *= sx; particle.y *= sy;
+        particle.vx *= sx; particle.vy *= sy;
+      }
+      particle.size *= hudRatio;
     }
     width = w; height = h; dpr = ratio;
     hudScale = nextHudScale;
@@ -200,11 +233,18 @@ export function createPresentation(host, canvas, clips, fxConfig, textures, conf
     }
   }
 
+  function dismissQueueCategory() {
+    queueLanding = null;
+    queueCategory.hidden = true;
+  }
+
   function reset() {
     motions.clear(); completedBursts.clear(); particles = []; boxes.length = 0;
     context.clearRect(0, 0, width, height);
     paintedEffects = false;
+    victoryStarted = false;
     storage.classList.remove("is-open");
+    dismissQueueCategory();
   }
 
   function render(state, images, geometry, viewport, now) {
@@ -232,21 +272,32 @@ export function createPresentation(host, canvas, clips, fxConfig, textures, conf
       let motion = motions.get(key);
       if (!motion) {
         const item = state.items[flight.itemIndex], shape = geometry[item.index];
-        const from = flight.from === "board" ? {
-          x: viewport.x + (shape.tx + shape.a * shape.width / 2 + shape.c * shape.height / 2) * viewport.scale,
-          y: viewport.y + (shape.ty + shape.b * shape.width / 2 + shape.d * shape.height / 2) * viewport.scale
-        } : center(flight.from === "queue" ? host.querySelectorAll(".slot")[flight.fromQueueIndex] : host.querySelector("#storage"));
+        const worldOrigin = flight.from === "board" ? {
+          x: shape.tx + shape.a * shape.width / 2 + shape.c * shape.height / 2,
+          y: shape.ty + shape.b * shape.width / 2 + shape.d * shape.height / 2
+        } : null;
+        const worldSize = worldOrigin ? Math.max(shape.bounds.right - shape.bounds.left, shape.bounds.bottom - shape.bounds.top) : 0;
+        const from = worldOrigin ? {
+          x: viewport.x + worldOrigin.x * viewport.scale,
+          y: viewport.y + worldOrigin.y * viewport.scale
+        } : center(flight.from === "queue" ? slots[flight.fromQueueIndex] : storage);
         motion = {
-          flight, from, item, orderIndex: flight.to === "box" ? state.boxes[flight.boxIndex].orderIndex : null,
-          size: flight.from === "board" ? Math.max(shape.bounds.right - shape.bounds.left, shape.bounds.bottom - shape.bounds.top) * viewport.scale :
+          flight, from, item, worldOrigin, worldSize, orderIndex: flight.to === "box" ? state.boxes[flight.boxIndex].orderIndex : null,
+          size: worldOrigin ? worldSize * viewport.scale :
             (flight.from === "storage" ? config.boxFlySize : QUEUE_ITEM_EXTENT) * unit,
-          lastTrail: flight.startAt, actionSent: false
+          lastTrail: flight.startAt, trailIndex: 0, actionSent: false
         };
         motions.set(key, motion);
-        if (flight.from === "board" && state.now - flight.startAt < 100) emit(from.x, from.y, flight.startAt, "pickup", unit);
+        if (worldOrigin && state.now - flight.startAt < 100) {
+          if (flight.isVacuum) emit(from.x, from.y, flight.startAt, "pickup", unit);
+          else if (flight.to === "box" && !reducedMotion) {
+            particles.push({ worldOrigin, at: flight.startAt + 70, life: 490, size: 50 * unit });
+          }
+        }
       }
-      if (flight.to === "box" && !motion.actionSent && state.now >= flight.endAt - 100) {
-        boxes[flight.boxIndex].actionAt = flight.endAt - 100;
+      const actionAt = flight.endAt - (motion.worldOrigin && !flight.isVacuum ? 45 : 100);
+      if (flight.to === "box" && !motion.actionSent && state.now >= actionAt) {
+        boxes[flight.boxIndex].actionAt = actionAt;
         motion.actionSent = true;
       }
     }
@@ -255,10 +306,36 @@ export function createPresentation(host, canvas, clips, fxConfig, textures, conf
       const flight = motion.flight;
       if (flight.to === "box" && state.boxes[flight.boxIndex].orderIndex === motion.orderIndex) {
         boxes[flight.boxIndex].flashAt = flight.endAt;
-        const point = center(boxes[flight.boxIndex].count);
-        emit(point.x, point.y, flight.endAt, "arrival", unit);
+        const basket = boxes[flight.boxIndex];
+        const fromBoard = motion.worldOrigin && !flight.isVacuum;
+        const point = center(fromBoard ? basket.front : basket.count);
+        emit(point.x, point.y - (fromBoard ? point.height * .31 : 0), flight.endAt, "arrival", unit);
+      } else if (flight.to === "queue" && motion.worldOrigin && motion.item.zone === "queue" && now - flight.endAt < 230) {
+        const sprite = slots[motion.item.queueIndex].querySelector(".queue-item");
+        if (!reducedMotion) sprite?.animate([
+          { transform: "scale(1)" }, { transform: "scale(1.12)", offset: .35 }, { transform: "scale(1)" }
+        ], { duration: 200, easing: "ease-out" });
+        queueLanding = { item: motion.item, at: flight.endAt };
+        queueCategory.textContent = categoryNames[motion.item.subgroup] || "";
       }
       motions.delete(key);
+    }
+    if (queueLanding) {
+      const age = now - queueLanding.at;
+      const { item } = queueLanding;
+      if (age >= 1150 || item.zone !== "queue" || !queueCategory.textContent) {
+        queueCategory.hidden = true;
+        queueLanding = null;
+      } else if (queueRow.clientWidth) {
+        const slot = slots[item.queueIndex];
+        queueCategory.hidden = false;
+        const edge = (queueCategory.offsetWidth - (width - queueRow.clientWidth)) / 2 + 4;
+        const slotCenter = tray.clientLeft + slot.offsetLeft + slot.offsetWidth / 2;
+        const anchor = Math.min(queueRow.clientWidth - edge, Math.max(edge, slotCenter));
+        queueCategory.style.setProperty("--slot-center", anchor + "px");
+        queueCategory.style.setProperty("--label-scale", reducedMotion ? 1 : .73 + .27 * smoothStep(age / 130));
+        queueCategory.style.opacity = reducedMotion ? 1 : Math.min(1, (1150 - age) / 160);
+      }
     }
 
     for (const box of state.boxes) {
@@ -279,7 +356,7 @@ export function createPresentation(host, canvas, clips, fxConfig, textures, conf
       const scale = .96 + .04 * (1 - (1 - opening) ** 3) - .08 * departing;
       node.element.style.transform = "translateX(-50%) translateY(" + (1 - opening) ** 2 * 10 * unit + "px) scale(" + (scale + bump) + "," + (scale - bump * .5) + ")";
       node.element.style.opacity = 1 - departing;
-      const flash = Math.max(0, 1 - (now - node.flashAt) / 280);
+      const flash = reducedMotion ? 0 : Math.max(0, 1 - (now - node.flashAt) / 280);
       node.count.style.transform = "scale(" + (1 + Math.sin(flash * Math.PI) * .14) + ")";
       node.lid.hidden = !completing && !finished;
       if (!node.lid.hidden) {
@@ -294,6 +371,25 @@ export function createPresentation(host, canvas, clips, fxConfig, textures, conf
           const point = center(node.element);
           if (now - burstAt < 1000) emit(point.x + 5 * unit, point.y + 16 * unit, burstAt, "complete", unit);
           if (now - burstAt < 200) onBoxClose();
+        }
+      }
+    }
+
+    if (state.status === "won" && !victoryStarted) {
+      victoryStarted = true;
+      if (!motionPreference.matches) {
+        for (const side of [1, -1]) {
+          for (let index = 0; index < 42; index++) {
+            const delay = index < 30 ? index * 3 : 150 + Math.random() * 105;
+            particles.push({
+              victorySide: side, at: now + delay, life: 840 + Math.random() * 340,
+              y: .75 + Math.random() * .06,
+              vx: .14 + Math.random() * .88, vy: .64 + Math.random() * 1.68,
+              angle: Math.random() * Math.PI * 2, spin: (Math.random() - .5) * 13,
+              size: .017 + Math.random() * .014, color: VICTORY_COLORS[Math.floor(Math.random() * VICTORY_COLORS.length)],
+              shape: index % 6 === 0 ? "ribbon" : index % 6 === 1 ? "spark" : "confetti"
+            });
+          }
         }
       }
     }
@@ -326,18 +422,25 @@ export function createPresentation(host, canvas, clips, fxConfig, textures, conf
         }
         continue;
       }
-      const finalSize = f.to === "box" ? config.boxFlySize * unit : f.to === "queue" ? QUEUE_ITEM_EXTENT * unit : 100 * unit;
+      const pickup = motion.worldOrigin && !f.isVacuum;
+      if (pickup && (elapsed < hop || reducedMotion)) {
+        const shape = geometry[item.index];
+        motion.from.x = viewport.x + motion.worldOrigin.x * viewport.scale;
+        motion.from.y = viewport.y + motion.worldOrigin.y * viewport.scale;
+        motion.size = motion.worldSize * viewport.scale;
+        const pulse = reducedMotion ? 0 : Math.sin(Math.PI * smoothStep(elapsed / (hop * .8)));
+        const scale = viewport.scale * (1 + pulse * (f.to === "queue" ? .18 : .08));
+        context.save();
+        context.translate(motion.from.x, motion.from.y);
+        context.scale(scale, scale);
+        context.transform(shape.a, shape.b, shape.c, shape.d, shape.tx - motion.worldOrigin.x, shape.ty - motion.worldOrigin.y);
+        context.drawImage(images.get(item.boardId ?? item.id), 0, 0);
+        context.restore();
+        continue;
+      }
       let x = motion.from.x, y = motion.from.y, size = motion.size;
       let behindRim = false, front;
-      if (hop && elapsed < hop) {
-        const up = config.hopUpDuration * 1000;
-        const t = elapsed < up ? elapsed / up : (elapsed - up) / (hop - up);
-        const eased = 1 - (1 - t) * (1 - t);
-        const height = elapsed < up ? eased : 1 - eased * .5;
-        const scaleProgress = elapsed < up ? eased : 1 - eased;
-        y -= config.hopHeight * unit * height;
-        size *= 1 + (config.hopScale - 1) * scaleProgress;
-      } else if (grow && elapsed < grow) {
+      if (grow && elapsed < grow) {
         const fromScale = config.storageEndScale ?? .5;
         size = motion.size * (fromScale + (1 - fromScale) * (1 - (1 - elapsed / grow) ** 3));
       } else if (f.to === "box") {
@@ -347,23 +450,32 @@ export function createPresentation(host, canvas, clips, fxConfig, textures, conf
           y: front.top - rootRect.top + front.height * .19,
           width: front.width * .86
         };
-        const from = { x, y: y - (hop ? config.hopHeight * unit / 2 : 0), size };
-        const pose = boxFlightPose(from, mouth, p, finalSize);
+        const from = { x, y, size };
+        const finalSize = config.boxFlySize * unit;
+        const pose = pickup ? pickupFlightPose(from, mouth, p, finalSize, true) : boxFlightPose(from, mouth, p, finalSize);
         if (pose.inside) continue;
         ({ x, y, size, behindRim } = pose);
+      } else if (f.to === "queue") {
+        const slot = slots[f.queueIndex];
+        const target = center(slot);
+        const finalSize = QUEUE_ITEM_EXTENT / 112 * Math.min(slot.clientWidth, slot.clientHeight);
+        ({ x, y, size } = pickupFlightPose({ x, y, size }, target, p, finalSize));
       } else {
-        const target = center(f.to === "queue" ? host.querySelectorAll(".slot")[f.queueIndex] : host.querySelector("#storage"));
+        const target = center(storage);
         const eased = 1 - (1 - p) ** 2;
         x += (target.x - x) * eased;
         y += (target.y - y) * eased - Math.sin(p * Math.PI) * config.flyJump * unit;
-        size += (finalSize - size) * eased;
-        if (f.to === "storage" && p > config.storageShrinkStart) size *= 1 - (p - config.storageShrinkStart) / (1 - config.storageShrinkStart) * .95;
+        size += (100 * unit - size) * eased;
+        if (p > config.storageShrinkStart) size *= 1 - (p - config.storageShrinkStart) / (1 - config.storageShrinkStart) * .95;
       }
-      if (state.now - motion.lastTrail >= 30 && !reducedMotion && !behindRim) {
+      if (state.now - motion.lastTrail >= 30 && !reducedMotion && !behindRim && f.to !== "queue") {
         motion.lastTrail = state.now;
         particles.push({
-          texture: textures.get("spark"), x, y, at: now, life: 350, angle: Math.random() * Math.PI,
-          vx: 0, vy: 12 * unit, size: (10 + Math.random() * 14) * unit, opacity: .85, gravity: 0
+          texture: textures.get("spark"),
+          color: pickup ? TRAIL_COLORS[motion.trailIndex++ % TRAIL_COLORS.length] : null,
+          x, y, at: now, life: 350, angle: Math.random() * Math.PI,
+          vx: 0, vy: 12 * unit, size: (pickup ? 18 + Math.random() * 11 : 10 + Math.random() * 14) * unit,
+          opacity: .9, gravity: 0
         });
       }
       if (behindRim) {
@@ -387,24 +499,108 @@ export function createPresentation(host, canvas, clips, fxConfig, textures, conf
     }
     if (broomFrom) paintSweepingBroom(context, textures.get("reviveBroom"), broomFrom, mouth, broomFrom.progress, 116 * unit);
 
-    particles = particles.filter(particle => now - particle.at < particle.life);
+    particles = particles.filter(particle => now - particle.at < particle.life &&
+      (!particle.victorySide || !motionPreference.matches));
+    let celebratingVictory = false;
     context.save();
     context.globalCompositeOperation = "lighter";
     for (const particle of particles) {
       const age = now - particle.at;
+      if (particle.victorySide) celebratingVictory = true;
       if (age < 0) continue;
       const seconds = age / 1000, progress = age / particle.life;
       const size = particle.size * (1 - progress * .55);
       context.save();
-      context.globalAlpha = particle.opacity * (1 - progress);
-      context.translate(particle.x + particle.vx * seconds, particle.y + particle.vy * seconds + particle.gravity * seconds * seconds);
-      context.rotate(particle.angle + seconds * .8);
-      context.drawImage(particle.texture, -size / 2, -size / 2, size, size);
+      if (particle.victorySide) {
+        // Use proportions of the visible game area so the bursts stay on both edges after a resize.
+        const inward = .025 + particle.vx * seconds * (1 - .34 * seconds);
+        const x = (particle.victorySide === 1 ? inward : 1 - inward) * width;
+        const y = (particle.y + .16 * progress - particle.vy * seconds * (1 - progress)) * height;
+        const extent = particle.size * Math.min(width, height);
+        context.globalCompositeOperation = "source-over";
+        context.globalAlpha = Math.min(1, (1 - progress) * 3.3);
+        context.translate(x, y);
+        context.rotate(particle.angle + particle.spin * seconds);
+        context.scale(extent, extent);
+        context.fillStyle = particle.color;
+
+        if (particle.shape === "ribbon") {
+          const curl = Math.sin(particle.angle + seconds * 15);
+          context.beginPath();
+          context.moveTo(-1.55, .25 * curl);
+          context.bezierCurveTo(-.85, -.85 + .35 * curl, -.6, .9, .12, .24);
+          context.bezierCurveTo(.75, -.42, .95, -.76 * curl, 1.55, -.22);
+          context.lineCap = "round";
+          context.strokeStyle = "#fff4dd";
+          context.lineWidth = .58;
+          context.stroke();
+          context.strokeStyle = particle.color;
+          context.lineWidth = .40;
+          context.stroke();
+        } else if (particle.shape === "spark") {
+          context.beginPath();
+          for (let point = 0; point < 8; point++) {
+            const angle = point * Math.PI / 4;
+            const radius = point % 2 === 0 ? .61 : .19;
+            context.lineTo(Math.sin(angle) * radius, Math.cos(angle) * radius);
+          }
+          context.closePath();
+          context.strokeStyle = "#fff4dd";
+          context.lineWidth = .13;
+          context.stroke();
+          context.fill();
+        } else {
+          context.scale(.32 + .68 * Math.abs(Math.cos(particle.angle + seconds * 11)), 1);
+          context.fillRect(-.28, -.52, .56, 1.04);
+          context.fillStyle = "#ffffff80";
+          context.fillRect(-.21, -.45, .12, .83);
+        }
+      } else if (particle.worldOrigin) {
+        const { x, y } = particle.worldOrigin;
+        const pop = Math.min(1, age / 105);
+        const extent = particle.size * (1 - (1 - pop) ** 3 + .15 * Math.sin(pop * Math.PI));
+        context.globalCompositeOperation = "source-over";
+        context.globalAlpha = Math.min(1, (1 - progress) * 4);
+        context.translate(viewport.x + x * viewport.scale, viewport.y + y * viewport.scale - 10 * unit);
+        context.scale(extent, extent);
+        context.lineCap = context.lineJoin = "round";
+        context.beginPath();
+        context.moveTo(-.39, .02);
+        context.lineTo(-.13, .28);
+        context.lineTo(.4, -.27);
+        context.lineWidth = .32;
+        context.strokeStyle = "#276940";
+        context.stroke();
+        context.lineWidth = .20;
+        context.strokeStyle = "#a9f96e";
+        context.stroke();
+      } else {
+        context.globalAlpha = particle.opacity * (1 - progress);
+        context.translate(particle.x + particle.vx * seconds, particle.y + particle.vy * seconds + particle.gravity * seconds * seconds);
+        context.rotate(particle.angle + seconds * .8);
+        if (particle.color) {
+          context.globalCompositeOperation = "source-over";
+          context.fillStyle = particle.color;
+          context.beginPath();
+          for (let point = 0; point < 10; point++) {
+            const angle = point * Math.PI / 5;
+            const radius = size * (point % 2 === 0 ? .5 : .25);
+            context.lineTo(Math.sin(angle) * radius, -Math.cos(angle) * radius);
+          }
+          context.closePath();
+          context.strokeStyle = "#8a5d74";
+          context.lineWidth = Math.max(.65, size * .09);
+          context.lineJoin = "round";
+          context.stroke();
+          context.fill();
+        } else context.drawImage(particle.texture, -size / 2, -size / 2, size, size);
+      }
       context.restore();
     }
     context.restore();
+    return celebratingVictory;
   }
 
-  return { resize, reset, render };
+  return { resize, reset, render, dismissQueueCategory };
 }
 

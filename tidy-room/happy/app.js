@@ -1,9 +1,10 @@
-import { createSession, pick, advance, clearQueue, vacuum, unlockBox, revive, prefillTutorial, snapshot, restoreSession, canPick, acceptingBox } from "./session.js";
+import { createSession, pick, advance, clearQueue, vacuum, unlockBox, unlockQueueSlot, revive, prefillTutorial, snapshot, restoreSession, canPick, acceptingBox, MAX_QUEUE_SLOTS } from "./session.js";
 import { makeGeometry, computeBlockers, drawItem, hitContains } from "./geometry.js";
 import { createCamera } from "./camera.js";
 import { createPresentation, paintItem, paintSweptItem, paintSweepingBroom, QUEUE_ITEM_EXTENT } from "./presentation.js";
 import { applyPopupArt } from "./popup-art.js";
 import { setupMainMenuArt } from "./main-menu-art.js";
+import { createStoragePreview } from "./storage-preview.js";
 
 const base = new URL("./", import.meta.url);
 const host = document.querySelector("#game");
@@ -30,9 +31,9 @@ const languageTag = (options.get("lang") || document.documentElement.lang || nav
 const storageLanguage = languageTag === "zh" || languageTag.startsWith("zh-") ?
   languageTag.includes("hant") || /^zh-(tw|hk|mo)(-|$)/.test(languageTag) ? "zh-Hant" : "zh-Hans" : "en";
 const storageMessages = {
-  en: { label: "Storage", description: "Temporary storage", title: "Storage", confirm: "OK" },
-  "zh-Hans": { label: "暂存", description: "临时仓库", title: "暂存物品", confirm: "确定" },
-  "zh-Hant": { label: "暫存", description: "臨時倉庫", title: "暫存物品", confirm: "確定" }
+  en: { label: "Storage", description: "Temporary storage", title: "Storage", confirm: "OK", empty: "Storage is empty" },
+  "zh-Hans": { label: "暂存", description: "临时仓库", title: "暂存物品", confirm: "确定", empty: "暂存箱里还没有物件" },
+  "zh-Hant": { label: "暫存", description: "臨時倉庫", title: "暫存物品", confirm: "確定", empty: "暫存箱裡還沒有物件" }
 };
 const storageText = storageMessages[storageLanguage];
 const REVIVE_COIN_COST = 800;
@@ -44,13 +45,13 @@ const menuCoinFormat = new Intl.NumberFormat(storageLanguage, { notation: "compa
 const reviveText = {
   en: { title: "Waiting slots full", description: "Sweep the waiting items into storage and keep going.", storage: "Storage",
     watch: "Watch video", free: "Free", coin: "Coin revive", balance: "Coins",
-    unavailable: "Rewarded ads are unavailable in this build." },
+    loading: "Loading video…", unavailable: "Video unavailable. Try again." },
   "zh-Hans": { title: "等待格已满", description: "把等待格里的物件扫进暂存箱，继续整理。", storage: "暂存箱",
     watch: "看视频复活", free: "免费", coin: "金币复活", balance: "金币余额",
-    unavailable: "当前版本暂未接入激励广告。" },
+    loading: "正在加载视频…", unavailable: "视频暂时无法播放，请重试。" },
   "zh-Hant": { title: "等待格已滿", description: "把等待格裡的物件掃進暫存箱，繼續整理。", storage: "暫存箱",
     watch: "看影片復活", free: "免費", coin: "金幣復活", balance: "金幣餘額",
-    unavailable: "目前版本尚未接入獎勵廣告。" }
+    loading: "正在載入影片…", unavailable: "影片暫時無法播放，請重試。" }
 }[storageLanguage];
 const menuText = {
   en: { home: "Home", back: "Back to home", shop: "Shop", full: "Full", level: value => "Level " + value,
@@ -136,9 +137,11 @@ let catalog, ui, state, level, geometry, images, background;
 let previousFrame = 0, presentationTime = 0;
 let presentation, presentationConfig, reviveBroom, revivePreview;
 let popupDismiss, livesPanel, discardResume = false;
+let rewardedAdPending = false;
+let roomLoading = true;
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 let lastPick = 0, drawnHint = -1, hudSignature = "";
-let completionShown = false, winAt = 0, toastTimer, loadingGeneration = 0;
+let completionShown = false, toastTimer, loadingGeneration = 0;
 const sounds = new Map();
 let extras = { audio: [] };
 const url = path => new URL(path, base).href;
@@ -156,9 +159,24 @@ const camera = createCamera(canvas, {
     lastPick = performance.now();
     if (drawnHint !== -1) { drawnHint = -1; render(); }
   },
-  canInteract: () => Boolean(state && !state.paused && state.status === "playing" && loading.hidden)
+  canInteract: () => Boolean(state && !state.paused && state.status === "playing" && !roomLoading && !rewardedAdPending)
 });
 const viewport = camera.view;
+let storagePreviewOwner = null;
+const storagePreviewLayer = document.querySelector("#storage-preview");
+storagePreviewLayer.lang = storageLanguage;
+storagePreviewLayer.setAttribute("aria-label", storageText.title);
+storagePreviewLayer.setAttribute("role", "region");
+storageButton.setAttribute("aria-controls", storagePreviewLayer.id);
+storageButton.setAttribute("aria-expanded", "false");
+const storagePreview = createStoragePreview(storagePreviewLayer, storageButton, () => {
+  if (storagePreviewOwner === state) {
+    state.paused = popup.open || !mainMenu.hidden || roomLoading || rewardedAdPending;
+    previousFrame = 0;
+    lastPick = performance.now();
+  }
+  storagePreviewOwner = null;
+});
 
 function notify(text) {
   clearTimeout(toastTimer);
@@ -226,6 +244,7 @@ function audio(name) {
 }
 
 function showPopup(title, content, actions, dismiss = closePopup, variant = "", dismissLabel = flowText.close) {
+  storagePreview.close(true);
   revivePreview = null;
   livesPanel = null;
   popupDismiss = dismiss;
@@ -284,9 +303,10 @@ function updateMainMenu() {
 }
 
 function showMainMenu() {
-  if (!state || !loading.hidden) return;
+  if (!state || roomLoading) return;
   if (popup.open) closePopup();
   mainMenu.hidden = false;
+  storagePreview.close(true);
   host.dataset.screen = "menu";
   state.paused = true;
   camera.cancel();
@@ -297,33 +317,39 @@ function showMainMenu() {
   menuPlay.focus({ preventScroll: true });
 }
 
+function playRoomHudIntro() {
+  host.classList.remove("room-ui-entering");
+  void host.offsetWidth;
+  host.classList.add("room-ui-entering");
+}
+
 function enterRoom() {
-  if (!state || !loading.hidden) return;
+  if (!state || roomLoading) return;
   refreshHearts();
   if (!development && catalog.config.heartsEnabled && !player.heartSpent && !player.hearts) {
     showLivesPopup(true, closePopup, enterRoom);
     return;
   }
   if (popup.open) closePopup();
-  const nextLevel = state.status === "won" ? player.level + 1 : player.level;
-  mainMenu.hidden = true;
-  host.dataset.screen = "game";
   if (state.status !== "playing") {
-    start(nextLevel);
+    const nextLevel = state.status === "won" ? player.level + 1 : player.level;
+    start(nextLevel, null, { enterGame: true });
     return;
   }
+  mainMenu.hidden = true;
+  host.dataset.screen = "game";
   state.paused = false;
   previousFrame = 0;
   lastPick = performance.now();
   presentation.reset();
-  render();
-  presentation.render(state, images, geometry, viewport, presentationTime);
+  resize();
+  playRoomHudIntro();
   persist();
   offerBoosterTutorial();
 }
 
 function showMenuRecords() {
-  if (!state || !loading.hidden) return;
+  if (!state || roomLoading) return;
   const body = document.createElement("dl");
   body.className = "menu-record-list";
   const records = [
@@ -386,10 +412,7 @@ function showRevivePopup() {
   };
   showPopup(reviveText.title, body, [
     [coinFormat.format(REVIVE_COIN_COST), () => continueRoom(REVIVE_COIN_COST)],
-    [reviveText.free, () => {
-      if (development) continueRoom(0);
-      else status.textContent = reviveText.unavailable;
-    }]
+    [reviveText.free, () => runRewardedVideo(() => continueRoom(0), status)]
   ], () => {
     if (catalog.config.heartsEnabled && player.heartSpent) confirmLifeLoss(true, () => showFailurePopup(), showRevivePopup);
     else showFailurePopup();
@@ -458,7 +481,7 @@ function renderRevivePreview(timestamp) {
 }
 
 function restartCurrentRoom(back) {
-  if (!loading.hidden) return;
+  if (roomLoading) return;
   refreshHearts();
   if (!development && catalog.config.heartsEnabled && !player.hearts) {
     showLivesPopup(true, back, () => restartCurrentRoom(back));
@@ -583,10 +606,7 @@ function showLivesPopup(required = false, back = closePopup, resume = closePopup
     persist();
   };
   showPopup(required ? flowText.outOfLives : flowText.lives, body, [
-    [flowText.watchForLife, () => {
-      if (development) refill(0, 1);
-      else status.textContent = reviveText.unavailable;
-    }],
+    [flowText.watchForLife, () => runRewardedVideo(() => refill(0, 1), status)],
     [flowText.refill, () => refill(HEART_REFILL_COST, MAX_HEARTS)]
   ], closeLives, "lives");
   const [watch, coin] = popupActions.children;
@@ -605,6 +625,33 @@ function checkOutOfLives() {
   if (player.hearts > 0) return false;
   showLivesPopup(true);
   return true;
+}
+
+async function runRewardedVideo(onReward, status) {
+  const capacitor = globalThis.Capacitor;
+  if (capacitor?.getPlatform?.() !== "android") {
+    onReward();
+    return;
+  }
+  if (rewardedAdPending) return;
+  if (status) status.textContent = reviveText.loading;
+  else notify(reviveText.loading);
+  rewardedAdPending = true;
+  host.inert = popup.inert = true;
+  camera.cancel();
+  let result;
+  try {
+    result = await capacitor.Plugins.RewardedVideo.show();
+    if (status) status.textContent = "";
+    else toastNode.hidden = true;
+  } catch {
+    if (status) status.textContent = reviveText.unavailable;
+    else notify(reviveText.unavailable);
+  } finally {
+    host.inert = popup.inert = false;
+    rewardedAdPending = false;
+  }
+  if (result?.rewarded === true) onReward();
 }
 
 function rewardUnavailable() {
@@ -768,7 +815,7 @@ function updateHud() {
   }
   const tray = document.querySelector("#queue");
   if (!tray.children.length) {
-    for (let slot = 0; slot < 7; slot++) {
+    for (let slot = 0; slot < MAX_QUEUE_SLOTS; slot++) {
       const element = document.createElement("button");
       element.type = "button";
       element.className = "slot";
@@ -777,7 +824,7 @@ function updateHud() {
     }
   }
   const freeCount = state.queue.filter(value => value === null).length;
-  for (let slot = 0; slot < 7; slot++) {
+  for (let slot = 0; slot < MAX_QUEUE_SLOTS; slot++) {
     const element = tray.children[slot], index = state.queue[slot];
     const occupied = index != null && state.items[index].zone === "queue";
     element.classList.toggle("reward", slot >= state.queue.length);
@@ -844,7 +891,7 @@ function updateBoosters() {
 }
 
 function offerBoosterTutorial() {
-  if (development || !state || state.status !== "playing" || state.paused || document.hidden || popup.open || !loading.hidden) return;
+  if (development || !state || state.status !== "playing" || state.paused || document.hidden || popup.open || roomLoading) return;
   const type = player.level >= 3 && !player.tutorialClaims.vacuum ? "vacuum" :
     player.level >= 6 && !player.tutorialClaims.clear ? "clear" : null;
   if (!type) return;
@@ -864,11 +911,14 @@ function offerBoosterTutorial() {
   showPopup("New Booster!", body, [["Continue", () => { closePopup(); offerBoosterTutorial(); }]], null);
 }
 
-async function start(displayLevel, restore = null) {
+async function start(displayLevel, restore = null, { enterGame = false } = {}) {
   const generation = ++loadingGeneration;
+  roomLoading = true;
+  storagePreview.close(true);
   if (popup.open) closePopup();
-  loading.hidden = false;
-  document.querySelector("#loading-text").textContent = "Loading…";
+  camera.cancel();
+  const loadingText = document.querySelector("#loading-text");
+  if (!loading.hidden) loadingText.textContent = "Loading…";
   const content = displayLevel <= 60 ? displayLevel : 7 + (displayLevel - 61) % 54;
   const alternate = player.variant === 1 && [3, 4, 5, 8, 11].includes(content) ? "_A" : "";
   try {
@@ -901,14 +951,18 @@ async function start(displayLevel, restore = null) {
     }));
     if (generation !== loadingGeneration) return;
     const nextGeometry = makeGeometry(nextLevel, catalog.assets, nextImages);
-    document.querySelector("#loading-text").textContent = "Preparing room…";
+    if (!loading.hidden) loadingText.textContent = "Preparing room…";
     const blockers = await computeBlockers(nextGeometry);
     if (generation !== loadingGeneration) return;
-    level = nextLevel; images = nextImages; geometry = nextGeometry; background = images.get(level.bg);
     const rules = { subgroups: catalog.subgroups, blockers };
-    const restored = restore ? restoreSession(level, rules, restore) : null;
+    const restored = restore ? restoreSession(nextLevel, rules, restore) : null;
     // A failed run is settled when the app starts again. An in-progress run keeps its reserved life.
-    state = restored && restored.status !== "lost" ? restored : createSession(level, rules);
+    state = restored && restored.status !== "lost" ? restored : createSession(nextLevel, rules);
+    level = nextLevel; images = nextImages; geometry = nextGeometry; background = images.get(level.bg);
+    if (enterGame) {
+      mainMenu.hidden = true;
+      host.dataset.screen = "game";
+    }
     const continuing = state === restored && state.actions.length > 0;
     if (!continuing) player.heartSpent = false;
     if (!continuing || typeof player.runId !== "string") player.runId = Date.now().toString(36) + Math.random().toString(36).slice(2);
@@ -920,7 +974,7 @@ async function start(displayLevel, restore = null) {
     presentation.reset();
     blockedTaps.clear();
     camera.setScene(background.width, background.height, catalog.config.maxZoomIn || 2);
-    completionShown = false; winAt = 0; hudSignature = ""; drawnHint = -1;
+    completionShown = false; hudSignature = ""; drawnHint = -1;
     const title = document.querySelector("#level-title");
     title.textContent = "LEVEL " + displayLevel;
     context.font = '46px "HappyTidy"';
@@ -928,19 +982,21 @@ async function start(displayLevel, restore = null) {
     updateBoosters();
     lastPick = performance.now(); previousFrame = 0;
     updateHud(); resize(); persist();
+    if (mainMenu.hidden) playRoomHudIntro();
     loading.hidden = true;
+    roomLoading = false;
     refreshHearts();
     if (!document.hidden && !popup.open && state.status === "playing") checkOutOfLives();
     offerBoosterTutorial();
   } catch (error) {
     if (generation !== loadingGeneration) return;
-    document.querySelector("#loading-text").textContent = error.message;
-    showPopup("Unable to load", error.message, [["Retry", () => start(displayLevel, restore)]]);
+    if (!loading.hidden) loadingText.textContent = error.message;
+    showPopup("Unable to load", error.message, [["Retry", () => start(displayLevel, restore, { enterGame })]], null);
   }
 }
 
 function tap(x, y) {
-  if (!state || state.paused || state.status !== "playing" || !loading.hidden) return;
+  if (!state || state.paused || state.status !== "playing" || roomLoading) return;
   const worldX = (x - viewport.x) / viewport.scale, worldY = (y - viewport.y) / viewport.scale;
   for (let index = state.items.length - 1; index >= 0; index--) {
     if (state.items[index].zone !== "board" || !hitContains(geometry[index], worldX, worldY)) continue;
@@ -966,53 +1022,69 @@ function tap(x, y) {
 
 document.querySelector("#orders").addEventListener("click", event => {
   const element = event.target.closest(".box");
-  if (!element || !state || state.paused || !loading.hidden) return;
+  if (!element || !state || state.paused || roomLoading) return;
   const box = state.boxes[Number(element.dataset.boxIndex)];
   const order = state.level.order[box.orderIndex];
-  if (box.locked && development) { unlockBox(state); changed(); }
-  else if (box.locked) rewardUnavailable();
-  else if (order) notify(catalog.names[order.type] + " · " + box.arrived + " / " + order.count);
+  if (box.locked && state.status === "playing" && !state.inputLocks && state.nextOrderIndex < state.level.order.length) {
+    runRewardedVideo(() => { if (unlockBox(state).ok) changed(); });
+  } else if (order) notify(catalog.names[order.type] + " · " + box.arrived + " / " + order.count);
 });
 document.querySelector("#queue").addEventListener("click", event => {
   const element = event.target.closest(".slot");
-  if (element && !state.paused && Number(element.dataset.slot) >= state.queue.length) rewardUnavailable();
+  if (!element || state?.status !== "playing" || state.paused || state.inputLocks || roomLoading) return;
+  if (Number(element.dataset.slot) >= state.queue.length) {
+    runRewardedVideo(() => { if (unlockQueueSlot(state).ok) changed(); });
+  }
 });
 
 menuPlay.addEventListener("click", enterRoom);
 document.querySelector("#menu-home").addEventListener("click", showMainMenu);
 document.querySelector("#menu-lives").addEventListener("click", () => {
-  if (state && loading.hidden && catalog.config.heartsEnabled) showLivesPopup();
+  if (state && !roomLoading && catalog.config.heartsEnabled) showLivesPopup();
 });
 const openMenuShop = () => {
-  if (state && loading.hidden) showCoinShop(0, menuText.back, closePopup);
+  if (state && !roomLoading) showCoinShop(0, menuText.back, closePopup);
 };
 document.querySelector("#menu-coins").addEventListener("click", openMenuShop);
 document.querySelector("#menu-shop").addEventListener("click", openMenuShop);
 document.querySelector("#menu-settings").addEventListener("click", () => {
-  if (state && loading.hidden) settings();
+  if (state && !roomLoading) settings();
 });
 
 document.querySelector("#settings").addEventListener("click", () => {
-  if (state?.status === "playing" && loading.hidden) settings();
+  if (state?.status === "playing" && !roomLoading) settings();
 });
 popupClose.addEventListener("click", () => popupDismiss?.());
 popup.addEventListener("cancel", event => {
   event.preventDefault();
-  popupDismiss?.();
+  if (!rewardedAdPending) popupDismiss?.();
 });
 document.querySelector("#hearts").addEventListener("click", () => {
-  if (state?.status === "playing" && loading.hidden && catalog.config.heartsEnabled) showLivesPopup();
+  if (state?.status === "playing" && !roomLoading && catalog.config.heartsEnabled) showLivesPopup();
 });
-storageButton.addEventListener("click", () => {
-  if (!catalog.config.storageTooltip) return;
-  if (!state?.storage.length) return;
-  const grid = document.createElement("div"); grid.className = "storage-grid";
-  for (const index of state.storage) grid.append(picture(url("data/" + catalog.assets[state.items[index].id].url), state.items[index].id));
-  showPopup(storageText.title, grid, [[storageText.confirm, closePopup]]);
+storageButton.addEventListener("click", event => {
+  if (!state || state.status !== "playing" || state.paused || roomLoading || popup.open || !mainMenu.hidden) return;
+  presentation.dismissQueueCategory();
+  const icons = state.storage.map(index => {
+    const item = state.items[index], pose = document.createElement("canvas");
+    pose.width = pose.height = 192;
+    pose.dataset.itemIndex = index;
+    pose.setAttribute("role", "img");
+    pose.setAttribute("aria-label", catalog.names[item.subgroup] || item.id);
+    paintItem(pose.getContext("2d"), images.get(item.id), item, 96, 96, 170);
+    return pose;
+  });
+  storagePreviewOwner = state;
+  state.paused = true;
+  camera.cancel();
+  blockedTaps.clear();
+  drawnHint = -1;
+  render();
+  storagePreview.open(icons, storageText.empty, event.detail === 0);
 });
 for (const [key, action] of [["clear", clearQueue], ["vacuum", vacuum]]) {
   document.querySelector("#" + key).addEventListener("click", () => {
-    if (!state || state.paused || !loading.hidden) return;
+    if (!state || state.paused || roomLoading) return;
     const unlockLevel = key === "vacuum" ? 3 : 6;
     if (!development && player.level < unlockLevel) { notify("Unlocks at level " + unlockLevel); return; }
     if (!development && player[key] <= 0) { rewardUnavailable(); return; }
@@ -1031,7 +1103,7 @@ document.addEventListener("visibilitychange", () => {
     camera.cancel();
     blockedTaps.clear();
     persist();
-  } else if (loading.hidden) {
+  } else if (!roomLoading && !rewardedAdPending) {
     render();
     if (!popup.open && state.status === "playing") checkOutOfLives();
     offerBoosterTutorial();
@@ -1043,10 +1115,11 @@ new ResizeObserver(resize).observe(host);
 
 function frame(timestamp) {
   requestAnimationFrame(frame);
-  if (!state || document.hidden || !loading.hidden) { previousFrame = 0; return; }
+  if (!state || document.hidden || roomLoading || rewardedAdPending) { previousFrame = 0; return; }
   const delta = previousFrame ? Math.min(100, timestamp - previousFrame) : 0;
   previousFrame = timestamp;
   if (state.paused) {
+    if (storagePreview.active) storagePreview.position();
     if (revivePreview) renderRevivePreview(timestamp);
     return;
   }
@@ -1057,7 +1130,7 @@ function frame(timestamp) {
   presentationTime = wasPlaying ? state.now : presentationTime + delta;
   const hudChanged = result.changed && updateHud();
   if (cameraChanged || hudChanged || blockedTaps.size) render(timestamp);
-  presentation.render(state, images, geometry, viewport, presentationTime);
+  const celebratingVictory = presentation.render(state, images, geometry, viewport, presentationTime);
   if (result.changed) {
     if (state.flights.length < priorFlights) audio("sfx_box_in");
     if (hudChanged) persist();
@@ -1078,8 +1151,7 @@ function frame(timestamp) {
   }
   if (state.status === "won" && !completionShown) {
     if (settleWin()) { persist(); refreshHearts(); }
-    if (!winAt) { winAt = timestamp + 2000; return; }
-    if (timestamp < winAt) return;
+    if (celebratingVictory) return;
     completionShown = true;
     audio("win_sfx");
     persist(); refreshHearts();
@@ -1114,6 +1186,7 @@ async function initialize() {
     texturePaths.add("ui-assets/outlined-v2/hamper-lid.png");
     texturePaths.add("ui-assets/reference-popup/atlas.png");
     texturePaths.add("ui-assets/main-menu/reference-v3.png");
+    texturePaths.add("ui-assets/main-menu/eye-level-messy-room-v3.png");
     texturePaths.add("ui-assets/outlined-v2/storage.png");
     const reviveBroomPath = "ui-assets/outlined-v2/revive-broom.png";
     texturePaths.add(reviveBroomPath);
@@ -1127,7 +1200,7 @@ async function initialize() {
     textures.set("glow", textures.get(presentationConfig.sprites.glow));
     reviveBroom = textures.get(reviveBroomPath);
     textures.set("reviveBroom", reviveBroom);
-    presentation = createPresentation(host, effectsCanvas, animationData.clips, presentationConfig, textures, catalog.config, () => audio("box_close"));
+    presentation = createPresentation(host, effectsCanvas, animationData.clips, presentationConfig, textures, catalog.config, catalog.names, () => audio("box_close"));
     if (document.fonts) await document.fonts.load('40px "HappyTidy"');
     const audioResponse = await fetch(url("data/audio.json"));
     if (audioResponse.ok) {
@@ -1138,8 +1211,6 @@ async function initialize() {
       const entry = ui.get(image.dataset.art);
       if (entry) image.src = url(entry.url);
     }
-    const loadingArt = ui.get("Loading_BGR");
-    if (loadingArt) document.documentElement.style.setProperty("--loading-art", 'url("' + url(loadingArt.url) + '")');
     await start(player.level, saved?.session);
     refreshHearts();
     setInterval(refreshHearts, 1000);
